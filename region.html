@@ -1,0 +1,3333 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Price and Discounts</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://Def.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="dist/css/style.css">
+
+  <script>
+        function check_uncheck_checkbox(isChecked) {
+        // alert('hhfhdf');
+        if(isChecked) {
+        $('input[name="language"]').each(function() {
+        this.checked = true;
+       $(".region_three button").removeAttr("disabled");
+        $(this).parent().parent().addClass("checked");
+        });
+        } else {
+        $('input[name="language"]').each(function() {         
+        this.checked = false;
+        $(this).parent().parent().removeClass("checked");
+        
+        });
+        }
+        }
+    $(document).ready(function () {
+
+
+          // $(".copybtn").click(function () {
+          // alert("copy Notification")
+          // });
+$(".price_list_details input").on('click', function(){
+// alert('input');
+// $(".region_three button").removeAttr("disabled");
+
+$(this).parent().parent().toggleClass("checked");
+$(this).toggleClass("active");
+
+if($('input[name="language"]').is(':checked'))
+{
+
+ $(".region_three .copybtn").removeAttr("disabled");
+}else
+{
+
+ $(".region_three .copybtn").attr("disabled","disabled");
+}
+// else{
+//    $(".region_three button").attr("disabled");
+// }
+
+
+
+});
+
+/* Selct dropdown*/
+  //hide all tabs first
+
+
+
+  /*888888888888888888888*/
+$(".region_two table .trwidth").click(function(){
+  // alert('hiiii');
+  $(".region_one, .region_two, .region_three").removeClass('col-md-6');
+   $(".region_one, .region_two, .region_three").addClass('col-md-4');
+})
+
+    $(".right_side").hide();
+    $('.logout').click(function() {
+      // alert('hi');
+    window.location.href='login.html';
+    });
+      $(".Result_container tr").click(function () {
+        $(this).addClass('active_bg').siblings().removeClass('active_bg');
+          // $(".Result_container tr").removeClass('active_bg');
+     $(".right_side").show();
+      });
+
+        //hide all tabs first
+       $(".Result_container tr.region1").click(function () {
+
+       $('.table2').show();
+       $('.table2').hide();
+       $('.table3').hide();
+        $('.table1').hide();
+       });
+            $(".Result_container tr.region2").click(function () {
+
+            $('.table3').show();
+            $('.table2').hide();        
+            $('.table1').hide();
+            });
+                 $(".Result_container tr.region3").click(function () {
+
+                 $('.table3').hide();
+                 $('.table2').hide();
+                 $('.table1').hide();
+                   $('.table4').show();
+                 });
+
+          $(".Result_container tr.global").click(function () {
+
+          $('.table1').show();
+          $('.table2').hide();
+          $('.table3').hide();
+                $('.table4').hide();
+          });
+
+                $(".Result_container tr.p1").click(function () {
+ $(".region_three .copybtn").attr("data-target","#prom1");
+                $('.table1.pp1').show();
+                $('.table2.pp2').hide();
+                $('.table3.pp3').hide();
+                $('.table4.pp4').hide();
+                });
+                    $(".Result_container tr.p2").click(function () {
+ $(".region_three .copybtn").attr("data-target","#prom2");
+                    $('.table1.pp1').hide();
+                    $('.table2.pp2').show();
+                    $('.table3.pp3').hide();
+                    $('.table4.pp4').hide();
+                    });
+                             $(".Result_container tr.p3").click(function () {
+ $(".region_three .copybtn").attr("data-target","#prom3");
+                             $('.table1.pp1').hide();
+                             $('.table2.pp2').hide();
+                             $('.table3.pp3').show();
+                             $('.table4.pp4').hide();
+                             });
+                                 $(".Result_container tr.p4").click(function () {
+ $(".region_three .copybtn").attr("data-target","#prom4");
+                                 $('.table1.pp1').hide();
+                                 $('.table2.pp2').hide();
+                                 $('.table3.pp3').hide();
+                                 $('.table4.pp4').show();
+                                 });
+                                      $(".Result_container tr.l1").click(function () {
+                                         $(".region_three .copybtn").attr("data-target","#region_modal1");
+                                        //  $(".region_three .copybtn").attr("data-target","#region_modal2");
+
+                                      $('.table1.ll1').show();
+                                      $('.table2.ll2').hide();
+                                      $('.table3.ll3').hide();
+                                      $('.table4.ll4').hide();
+                                      });
+                                          $(".Result_container tr.l2").click(function () {
+   $(".region_three .copybtn").attr("data-target","#region_modal2");
+  //  $(".region_three .copybtn").attr("data-target","#region_modal1");
+                                          $('.table1.ll1').hide();
+                                          $('.table2.ll2').show();
+                                          $('.table3.ll3').hide();
+                                          $('.table4.ll4').hide();
+                                          });
+                                            $(".Result_container tr.l3").click(function () {
+  $(".region_three .copybtn").attr("data-target","#region_modal3");
+                                            $('.table1.ll1').hide();
+                                            $('.table2.ll2').hide();
+                                            $('.table3.ll3').show();
+                                            $('.table4.ll4').hide();
+                                            });
+
+
+
+                 $(".Result_container tr.gprice").click(function () {
+                  $(".region_three .copybtn").attr("data-target","#gpromotion_modal");
+                  //  $(".region_three .copybtn").attr("data-target","#gprice_modal");
+                  
+                     $(".region_three .copybtn").removeClass("gpromotion_btn");
+                 $(".region_three .copybtn").addClass("gprice_btn");
+                 $('.table1.t1').show();
+                 $('.table2.t2').hide();
+               
+                 });
+                    $(".Result_container tr.gpromotions").click(function () {
+                        $(".region_three .copybtn").attr("data-target","#gprice_modal");
+                        // $(".region_three .copybtn").attr("data-target","#gpromotion_modal");
+                  $(".region_three .copybtn").removeClass("gprice_btn");
+                    $(".region_three .copybtn").addClass("gpromotion_btn");
+                    $('.table1.t1').hide();
+                    $('.table2.t2').show();
+                   
+                    });
+             $(".Result_container tr.region1").click(function () {
+
+             $('.table1').hide();
+             $('.table2').show();
+             $('.table3').hide();
+                $('.table4').hide();
+             });
+                    $(".Result_container tr.region2").click(function () {
+
+                    $('.table1').hide();
+                    $('.table2').hide();
+                    $('.table3').show();
+                       $('.table4').hide();
+                    });
+                        $(".Result_container tr.region3").click(function () {
+
+                        $('.table1').hide();
+                        $('.table2').hide();
+                        $('.table3').hide();
+                         $('.table4').show();
+                        });
+
+       $(".region_two .backbtn").click(function () {
+       $(".region_two").hide();
+        $(".region_three").hide();
+            $(".region_one, .region_two, .region_three").removeClass('col-md-4');
+         $(".region_one, .region_two, .region_three").addClass('col-md-6');
+    
+       });
+          $(".region_three .backbtn").click(function () {
+          $(".region_three").hide();
+          $(".region_one, .region_two").removeClass('col-md-4');
+          $(".region_one, .region_two").addClass('col-md-6');
+
+          });
+    });
+  </script>
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+      </li>
+
+    </ul>
+
+    <!-- SEARCH FORM -->
+
+
+    <!-- Right navbar links -->
+  <ul class="navbar-nav ml-auto">
+    <!-- Messages Dropdown Menu -->
+    <li class="nav-item dropdown vince">
+      <img src="./dist/img/logo_white.png" />
+
+    </li>
+    <!-- Notifications Dropdown Menu -->
+
+
+  </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-1">
+    <!-- Brand Logo -->
+    <!-- <a href="index.html" class="brand-link">
+      <img src="dist/img/logo1.png" alt="Price and Discount Logo" class="brand-image img-circle">
+      <span class="brand-text ">Price and Discount</span>
+    </a> -->
+    <div class="sidebar__logo">
+      <figure>
+        <a href="./index.html">
+    <div class="vince_log"><img src="./dist/img/plantasjen.svg" /></div>
+    <div>
+      <p> Price & Discounts</p>
+
+    </div>
+        </a>
+      </figure>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+  
+
+      <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+            <li class="nav-item">
+              <a href="items_page.html" class="nav-link ">
+                <i class="nav-icon far fa-file-alt"></i>
+                <p>
+                  Items
+                </p>
+              </a>
+            </li>
+            <li class="nav-item has-treeview menu-open">
+              <a href="#" class="nav-link active_list">
+                <i class="nav-icon fas fa-dollar-sign"></i>
+                <p>
+                  Price
+                  <i class="right fas fa-angle-right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="./price_list.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Price List</p>
+                    </a>
+                  </li>
+                <li class="nav-item">
+                  <a href="./purchase_price.html" class="nav-link ">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Purchase Price</p>
+                  </a>
+                </li>
+              
+                      <li class="nav-item">
+                        <a href="./region.html" class="nav-link active_child">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Price List Type</p>
+                        </a>
+                      </li>
+              </ul>
+            </li>
+ 
+            <!-- <li class="nav-item">
+                       <a href="price_list.html" class="nav-link">
+                         <i class="nav-icon fas fa-fas fa-list"></i>
+                         <p>
+                           Price List
+                         </p>
+                       </a>
+                     </li> -->
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon nav-icon fas fa-fas fa-qrcode"></i>
+                <p>
+                  Assortment
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./currency.html" class="nav-link">
+                <i class="nav-icon far fa-far fa-money-bill-alt"></i>
+                <p>
+                  Currency
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-fas fa-percent"></i>
+                <p>
+                  Margins
+                </p>
+              </a>
+            </li>
+            <!-- <li class="nav-item has-treeview ">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-fas fa-ad"></i>
+              <p>
+                Promotions
+                <i class="right fas fa-angle-right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="./index.html" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Labels</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Store Plan</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Store Classification</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+               <li class="nav-item has-treeview ">
+                 <a href="#" class="nav-link active">
+                  
+                   <i class="nav-icon fas fa-search"></i>
+                   <p>
+                     Lookup
+                     <i class="right fas fa-angle-right"></i>
+                   </p>
+                 </a>
+                 <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                    <a href="./index.html" class="nav-link active">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Suppliers</p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Item Group</p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Product Group </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Warehouse </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Stores </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Business <Area></Area> </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Currency <Area></Area> </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Shop Categroy <Area></Area> </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Shop Class <Area></Area> </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Shop Volume Class <Area></Area> </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>PO Type <Area></Area> </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>MO Type <Area></Area> </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>DO Type <Area></Area> </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i
+                    class="far fa-circle nav-icon"></i>
+                    <p>CO Type <Area></Area> </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i
+                    class="far fa-circle nav-icon"></i>
+                    <p>Promotion Type <Area></Area>
+                    </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#"
+                    class="nav-link">
+                    <i
+                    class="far fa-circle nav-icon"></i>
+                    <p>Supplier Lead Time
+                    <Area></Area>
+                    </p>
+                    </a>
+                    </li>
+                    <li
+                    class="nav-item">
+                    <a href="#"
+                    class="nav-link">
+                    <i
+                    class="far fa-circle nav-icon"></i>
+                    <p>Warehouse Lead
+                    Time
+                    <Area></Area>
+                    </p>
+                    </a>
+                    </li>
+                    <li
+                    class="nav-item">
+                    <a href="#"
+                    class="nav-link">
+                    <i
+                    class="far fa-circle nav-icon"></i>
+                    <p>Delivery                                                                                                       Lead
+                    Term
+                    <Area></Area>
+                    </p>
+                    </a>
+                    </li>
+                    <li
+                    class="nav-item">
+                    <a href="#"
+                    class="nav-link">
+                    <i
+                    class="far fa-circle nav-icon"></i>
+                    <p>
+                    Delivery Method                                                                                        Lead
+
+                    <Area></Area>
+                    </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i
+                    class="far fa-circle nav-icon"></i>
+                    <p>
+                    Customer Table
+                    <Area></Area>
+                    </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#"
+                    class="nav-link">
+                    <i
+                    class="far fa-circle nav-icon"></i>
+                    <p>
+                    Warehouse Table
+                    <Area></Area>
+                    </p>
+                    </a>
+                    </li>
+                    </ul>
+                    </li> -->
+
+
+
+          </ul>
+             <div class="sidebar__tools footer_bottom">
+               <ul class="list-links list-links--bordered">
+                 <li class="list-links__item list-links__item--with-icon"><a href="#">
+                     <div class=" userprofiles"><i class="fas fa-user-circle"></i></div><span>Admin</span>
+                     <div class="logout_view">
+                       <div style="display: inline-block; position: relative;">
+                        <!-- <a href="Login.html"> -->
+                          <div title="Logout" class="logout"><i class="fas fa-sign-out-alt"></i>
+                       </div>
+                       <!-- </a> -->
+                  
+                       </div>
+                     </div>
+                   </a></li>
+               </ul>
+             </div>
+        </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+    
+        <!-- /.row -->
+        <!-- Main row -->
+       
+        <div class="row price_list_type">
+          <div class="col-md-6 left_side region_one">
+                <div class="content-header">
+                  <div class="container-fluid row">
+                    <div class="col-md-10"><i class="nav-icon fas fa-dollar-sign fleft"></i>
+                      <h1>Price List Type </h1>
+                    </div>
+                       <div class="col-md-2 right_import"><button title="Import M3" class="btn btn_style"><i
+                             class="nav-icon fas fa-download fleft"></button></i>
+                        
+                       </div>
+                    
+
+                  </div><!-- /.container-fluid -->
+                </div>
+  <div class="form-field  ">
+     <div class="col-md-2 "><button title="Create New List" class="btn btn_style"><i
+           class="nav-icon fas fa-plus-circle fleft"></button></i>
+
+     </div>
+    <div class="control">
+      <input type="text" placeholder="Search" class="search_filter" />
+    </div>
+  </div>
+  <div class="container_filter_result">
+
+    <div class="Result_container Region_height">
+
+          <table style="width:100%" class="items_search Region_Search font_family ">
+
+            <tr>
+
+            </tr>
+            <tr class="trwidth global">
+              <td class="width"><b>Global</b></td>
+              <td class="width">
+                <div><b>Nutriment Stick</b></div>
+                <div><b>Desc1 Cofa Plastics AB</b></div>
+                 
+              </td>
+               <td class="width">
+                 <div><b>ID: </b>4521541458</div>
+                 <div style="visibility: hidden"><b>Currency</b>: NOK</div>
+
+               </td>
+
+            </tr>
+             <tr class="trwidth region1">
+               <td class="width"><b>Region</b></td>
+               <td class="width">
+                 <div><b>REED DIFFUSER 45 ml Tropical Cooldown</b></div>
+                 <div><b> Description 2 Fiskars Norge Redskap AS</b></div>
+
+               </td>
+               <td class="width">
+                 <div><b>ID: </b>5241541458</div>
+                 <div style="visibility: hidden"><b>Currency</b>: NOK</div>
+
+               </td>
+
+             </tr>
+              <tr class="trwidth region2">
+                <td class="width"><b>Local </b></td>
+                <td class="width">
+                  <div><b>Grave Light 35H:</b></div>
+                  <div><b>Description 3 Floragard Vertried Gmbh</b></div>
+
+                </td>
+                <td class="width">
+                  <div><b>ID: </b>6547541458</div>
+                  <div style="visibility: hidden"><b>Currency</b>: NOK</div>
+
+                </td>
+
+              </tr>
+                    <tr class="trwidth region3">
+                      <td class="width"><b>Promotions </b></td>
+                      <td class="width">
+                        <div><b>Bolsius Nordic AB</b></div>
+                        <div><b>Desc 4 ASB Greenworld AB</b></div>
+
+                      </td>
+                      <td class="width">
+                        <div><b>ID: </b>9895841458</div>
+                        <div style="visibility: hidden"><b>Currency</b>: NOK</div>
+
+                      </td>
+
+                    </tr>
+     
+                      
+              
+             
+                     
+         
+          </table>
+     
+   
+    </div>
+  </div>
+          </div>
+        
+              <div class="col-md-6 right_side region_two">
+                       <div class="content-header">
+                         <div class="container-fluid row">
+                           <div class="col-md-10"><i class="nav-icon far fa-file-alt fleft"></i>
+                             <h1>Price List Details</h1>
+                           </div>
+                           <!-- <div class="col-md-2 right_import"><button title="Import M3" class="btn btn_style"><i
+                                 class="nav-icon fas fa-download fleft"></button></i>
+
+                           </div> -->
+
+
+                         </div><!-- /.container-fluid -->
+                       </div>
+                       <div class="form-field  ">
+                         <div class="col-md-2 "><button title="Import M3" class="btn btn_style"><i
+                               class="nav-icon fas fa-plus-circle fleft"></i></button>
+
+                         </div>
+                         <div class="control">
+                           <input type="text" placeholder="Search" class="search_filter">
+                         </div>
+                       </div>
+                     <div class="container">
+<div class=" right_import"><button title="Back" class="btn btn_style backbtn"><i
+      class="nav-icon fas fa-arrow-alt-circle-left fleft"></button></i>
+
+<i class=""></i>
+</div>
+<div class="container_filter_result">
+
+  <div class="Result_container Region_height">
+
+    <table style="width:100%" class="items_search Region_Search font_family table1">
+
+      <tbody>
+        <tr>
+
+        </tr>
+        <tr class="trwidth gprice">
+          <td class="width"><b>Global Price List</b></td>
+          <td class="width">
+            <div><b>REGION 1 SOUTH NOR </b></div>
+            <div><b>Currency</b>: NOK</div>
+
+          </td>
+          <!-- <td class="width">
+            <div><b>Def: </b>4521541458</div>
+            <div style="visibility: hidden"><b>Currency</b>: NOK</div>
+
+          </td> -->
+
+        </tr>
+          <tr class="trwidth gpromotions">
+            <td class="width"><b>Global Promotions</b></td>
+            <td class="width">
+              <div><b>REGION 1 SOUTH NOR </b></div>
+              <div><b>Currency</b>: NOK</div>
+
+            </td>
+            <!-- <td class="width">
+              <div><b>Def: </b>4521541458</div>
+              <div style="visibility: hidden"><b>Currency</b>: NOK</div>
+
+            </td> -->
+
+          </tr>
+        
+
+
+
+
+
+      </tbody>
+    </table>
+     <table style="width:100%" class="items_search Region_Search font_family table2">
+
+ <tbody>
+   <tr>
+
+   </tr>
+   <tr class="trwidth l1">
+     <td class="width"><b>3F220L</b></td>
+     <td class="width">
+       <div><b>REGION 1 SOUTH NOR </b></div>
+       <div><b>Currency</b>: NOK</div>
+
+     </td>
+     <td class="width">
+       <div><b>Def: </b>4521541458</div>
+       <div style="visibility: hidden"><b>Currency</b>: NOK</div>
+
+     </td>
+
+   </tr>
+   <tr class="trwidth l2">
+     <td class="width"><b>3F220M</b></td>
+     <td class="width">
+       <div><b>REGION 2 EAST NOR </b></div>
+       <div><b>Currency</b>: NOK</div>
+
+     </td>
+     <td class="width">
+       <div><b>Def: </b> 5585414588</div>
+       <div style="visibility: hidden"><b>Currency</b>: NOK</div>
+
+     </td>
+
+   </tr>
+   <tr class="trwidth l3">
+     <td class="width"><b>3F220S</b></td>
+     <td class="width">
+       <div><b>REGION 3 WEST NOR </b></div>
+       <div><b>Currency</b>: NOK</div>
+
+     </td>
+ <td class="width">
+   <div><b>Def: </b> 5585414588</div>
+   <div style="visibility: hidden"><b>Currency</b>: NOK</div>
+
+ </td>
+
+   </tr>
+   <tr class="trwidth l4">
+     <td class="width"><b>3F221L</b></td>
+     <td class="width">
+       <div><b>REGION 4 NORTHERN NOR </b></div>
+       <div><b>Currency</b>: NOK</div>
+
+     </td>
+     <td class="width">
+       <div><b>Def: </b>8521541458</div>
+       <div style="visibility: hidden"><b>Currency</b>: NOK</div>
+
+     </td>
+
+   </tr>
+    <tr class="trwidth l2">
+      <td class="width"><b>3F220M</b></td>
+      <td class="width">
+        <div><b>REGION 2 EAST NOR </b></div>
+        <div><b>Currency</b>: NOK</div>
+
+      </td>
+      <td class="width">
+        <div><b>Def: </b> 5585414588</div>
+        <div style="visibility: hidden"><b>Currency</b>: NOK</div>
+
+      </td>
+
+    </tr>
+   
+  
+
+
+
+
+
+ </tbody>
+     </table>
+        <table style="width:100%" class="items_search Region_Search font_family table3">
+
+          <tbody>
+          <tr class="trwidth l1">
+            <td class="width"><b>3F230M</b></td>
+            <td class="width">
+              <div><b>REGION 7 WEST NOR </b></div>
+              <div><b>Currency</b>: SEK</div>
+
+            </td>
+            <td class="width">
+              <div><b>Def: </b> 9515414588</div>
+              <div style="visibility: hidden"><b>Currency</b>: NOK</div>
+
+            </td>
+
+          </tr>
+           
+            <tr class="trwidth l2">
+              <td class="width"><b>3F220M</b></td>
+              <td class="width">
+                <div><b>REGION 2 EAST NOR </b></div>
+                <div><b>Currency</b>: NOK</div>
+
+              </td>
+              <td class="width">
+                <div><b>Def: </b> 5585414588</div>
+                <div style="visibility: hidden"><b>Currency</b>: NOK</div>
+
+              </td>
+
+            </tr>
+            <tr class="trwidth l3">
+              <td class="width"><b>3F220S</b></td>
+              <td class="width">
+                <div><b>REGION 3 WEST NOR </b></div>
+                <div><b>Currency</b>: NOK</div>
+
+              </td>
+              <td class="width">
+                <div><b>Def :</b> 7815414588</div>
+                <div style="visibility: hidden"><b>Currency</b>: NOK</div>
+
+              </td>
+
+            </tr>
+                       <tr class="trwidth l2">
+                         <td class="width"><b>3F220M</b></td>
+                         <td class="width">
+                           <div><b>REGION 2 EAST NOR </b></div>
+                           <div><b>Currency</b>: NOK</div>
+
+                         </td>
+                         <td class="width">
+                           <div><b>Def: </b> 5585414588</div>
+                           <div style="visibility: hidden"><b>Currency</b>: NOK</div>
+
+                         </td>
+
+                       </tr>
+             <tr class="trwidth l4">
+               <td class="width"><b>3F220L</b></td>
+               <td class="width">
+                 <div><b>REGION 1 SOUTH NOR </b></div>
+                 <div><b>Currency</b>: NOK</div>
+
+               </td>
+               <td class="width">
+                 <div><b>Def: </b>4521541458</div>
+                 <div style="visibility: hidden"><b>Currency</b>: NOK</div>
+
+               </td>
+
+             </tr>
+           
+            <tr class="trwidth l5">
+              <td class="width"><b>3F221M</b></td>
+              <td class="width">
+                <div><b>REGION 2 EAST NOR </b></div>
+                <div><b>Currency</b>: NOK</div>
+
+              </td>
+              <td class="width">
+                <div><b>Def: </b> 9515414588</div>
+                <div style="visibility: hidden"><b>Currency</b>: NOK</div>
+
+              </td>
+
+            </tr>
+
+  <tr class="trwidth l3">
+    <td class="width"><b>3F220S</b></td>
+    <td class="width">
+      <div><b>REGION 3 WEST NOR </b></div>
+      <div><b>Currency</b>: NOK</div>
+
+    </td>
+    <td class="width">
+      <div><b>Def :</b> 7815414588</div>
+      <div style="visibility: hidden"><b>Currency</b>: NOK</div>
+
+    </td>
+
+  </tr>
+  <tr class="trwidth l4">
+    <td class="width"><b>3F220L</b></td>
+    <td class="width">
+      <div><b>REGION 1 SOUTH NOR </b></div>
+      <div><b>Currency</b>: NOK</div>
+
+    </td>
+    <td class="width">
+      <div><b>Def: </b>4521541458</div>
+      <div style="visibility: hidden"><b>Currency</b>: NOK</div>
+
+    </td>
+
+  </tr>
+
+
+
+
+
+          </tbody>
+        </table>
+           <table style="width:100%" class="items_search Region_Search font_family table4">
+
+             <tbody>
+               <tr class="trwidth p1">
+                 <td class="width"><b>promotion1</b></td>
+                 <td class="width">
+                   <div><b>REGION 7 WEST NOR </b></div>
+                   <div><b>Currency</b>: SEK</div>
+
+                 </td>
+                 <td class="width">
+                   <div><b>Def: </b> 7815414588</div>
+                   <div style="visibility: hidden"><b>Currency</b>: NOK</div>
+
+                 </td>
+
+               </tr>
+
+               <tr class="trwidth p2">
+                 <td class="width"><b>promotion2</b></td>
+                 <td class="width">
+                   <div><b>REGION 2 EAST NOR </b></div>
+                   <div><b>Currency</b>: NOK</div>
+
+                 </td>
+                 <td class="width">
+                   <div><b>Def: </b> 5454515454</div>
+                   <div style="visibility: hidden"><b>Currency</b>: NOK</div>
+
+                 </td>
+
+               </tr>
+               <tr class="trwidth p3">
+                 <td class="width"><b>promotion3</b></td>
+                 <td class="width">
+                   <div><b>REGION 3 WEST NOR </b></div>
+                   <div><b>Currency</b>: NOK</div>
+
+                 </td>
+                 <td class="width ">
+                   <div><b>Def :</b> 7815414588</div>
+                   <div style="visibility: hidden"><b>Currency</b>: NOK</div>
+
+                 </td>
+
+               </tr>
+               <tr class="trwidth p4">
+                 <td class="width"><b>3F220L</b></td>
+                 <td class="width">
+                   <div><b>REGION 1 SOUTH NOR </b></div>
+                   <div><b>Currency</b>: NOK</div>
+
+                 </td>
+                 <td class="width">
+                   <div><b>Def: </b>4521541458</div>
+                   <div style="visibility: hidden"><b>Currency</b>: NOK</div>
+
+                 </td>
+
+               </tr>
+
+               
+              
+
+
+
+
+             </tbody>
+           </table>
+
+  </div>
+</div>
+
+                      <!-- <section id="tabs" class="project-tab">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <nav>
+                                <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                   <a class="nav-item nav-link active" id="nav-info-tab" data-toggle="tab"
+                                     href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="true"><i
+                                       class="nav-icon fas fa-info-circle fleft"></i>Info
+                                   </a>
+                                  <a class="nav-item nav-link " id="nav-home-tab" data-toggle="tab"
+                                    href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><i
+                                      class="nav-icon fas fa-users fleft"></i>Suppliers
+                                    </a>
+                                  <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
+                                    href="#nav-profile" role="tab" aria-controls="nav-profile"
+                                    aria-selected="false"><i class="fas fa-cube nav-icon fleft"></i>Packages</a>
+                               
+                                </div>
+                              </nav>
+                              <div class="tab-content" id="nav-tabContent">
+                                 <div class="tab-pane fade show active" id="nav-info" role="tabpanel"
+                                   aria-labelledby="nav-info-tab">
+                                  
+                                   <div class="info_tab_list">
+                                     <table>
+                                       <tr>
+                                         <td>
+                                           <b>Information</b>
+                                         </td>
+                                         <td>
+                                           <b> Description</b><br />
+                                            Lorem Ipsum is simply dummy text of the printing printing and typesetting
+                                            industry Lorem Ipsum is simply dummy text of the printing printing and
+                                            typesetting
+                                            industry Lorem Ipsum is simply dummy text of the printing printing and
+                                            typesetting
+                                            industry
+                                           Item Type
+                                         </td>
+                                       </tr>
+                                       <tr>
+                                         <td>
+                                           <b>Item Number:</b>
+                                         </td>
+                                         <td>
+                                           125668585
+                                         </td>
+                                       </tr>
+                                       <tr>
+                                         <td>
+                                           <b> Item Type:</b>
+                                         </td>
+                                         <td>
+                                           ---
+                                         </td>
+                                       </tr>
+                                       <tr>
+
+
+                                         <td>
+                                           <b> Item supplier:</b>
+                                         </td>
+                                         <td>
+                                           ---
+                                         </td>
+                                       </tr>
+
+
+                                     
+
+                                         </tr>
+                                     </table>
+                                   </div>
+                                 </div>
+                                <div class="tab-pane fade " id="nav-home" role="tabpanel"
+                                  aria-labelledby="nav-home-tab">
+                                  <table class="table search_result" cellspacing="0" >
+                                    <thead>
+                                      <tr>
+                                        <th>Supplier Name</th>
+                                        <th>Supplier Def</th>
+                                        <th>External Supplier No</th>
+                                         <th>Is Main Supplier </th>
+                                         <th>Supplier Item Number</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td><a href="#">TreindustriensLandforesning</a></td>
+                                        <td>11402</td>
+                                        <td>3166322</td>
+                                         <td>yes</td>
+                                          <td>8811739</td>
+                                      </tr>
+                                      <tr>
+                                          <td><a href="#">TreindustriensLandforesning</a></td>
+                                          <td>11402</td>
+                                          <td>3166322</td>
+                                          <td>yes</td>
+                                          <td>8811739</td>
+                                      </tr>
+                                      <tr>
+                                          <td><a href="#">TreindustriensLandforesning</a></td>
+                                          <td>11402</td>
+                                          <td>3166322</td>
+                                          <td>yes</td>
+                                          <td>8811739</td>
+                                      </tr>
+                                            <tr>
+                                              <td><a href="#">TreindustriensLandforesning</a></td>
+                                              <td>11402</td>
+                                              <td>3166322</td>
+                                              <td>yes</td>
+                                              <td>8811739</td>
+                                            </tr>
+                                            <tr>
+                                              <td><a href="#">TreindustriensLandforesning</a></td>
+                                              <td>11402</td>
+                                              <td>3166322</td>
+                                              <td>yes</td>
+                                              <td>8811739</td>
+                                            </tr>
+                                            <tr>
+                                              <td><a href="#">TreindustriensLandforesning</a></td>
+                                              <td>11402</td>
+                                              <td>3166322</td>
+                                              <td>yes</td>
+                                              <td>8811739</td>
+                                            </tr>
+                                                  <tr>
+                                                    <td><a href="#">TreindustriensLandforesning</a></td>
+                                                    <td>11402</td>
+                                                    <td>3166322</td>
+                                                    <td>yes</td>
+                                                    <td>8811739</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td><a href="#">TreindustriensLandforesning</a></td>
+                                                    <td>11402</td>
+                                                    <td>3166322</td>
+                                                    <td>yes</td>
+                                                    <td>8811739</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td><a href="#">TreindustriensLandforesning</a></td>
+                                                    <td>11402</td>
+                                                    <td>3166322</td>
+                                                    <td>yes</td>
+                                                    <td>8811739</td>
+                                                  </tr>
+                                                        <tr>
+                                                          <td><a href="#">TreindustriensLandforesning</a></td>
+                                                          <td>11402</td>
+                                                          <td>3166322</td>
+                                                          <td>yes</td>
+                                                          <td>8811739</td>
+                                                        </tr>
+                                                        <tr>
+                                                          <td><a href="#">TreindustriensLandforesning</a></td>
+                                                          <td>11402</td>
+                                                          <td>3166322</td>
+                                                          <td>yes</td>
+                                                          <td>8811739</td>
+                                                        </tr>
+                                                        <tr>
+                                                          <td><a href="#">TreindustriensLandforesning</a></td>
+                                                          <td>11402</td>
+                                                          <td>3166322</td>
+                                                          <td>yes</td>
+                                                          <td>8811739</td>
+                                                        </tr>
+                                                              <tr>
+                                                                <td><a href="#">TreindustriensLandforesning</a></td>
+                                                                <td>11402</td>
+                                                                <td>3166322</td>
+                                                                <td>yes</td>
+                                                                <td>8811739</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td><a href="#">TreindustriensLandforesning</a></td>
+                                                                <td>11402</td>
+                                                                <td>3166322</td>
+                                                                <td>yes</td>
+                                                                <td>8811739</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td><a href="#">TreindustriensLandforesning</a></td>
+                                                                <td>11402</td>
+                                                                <td>3166322</td>
+                                                                <td>yes</td>
+                                                                <td>8811739</td>
+                                                              </tr>
+                                                                    <tr>
+                                                                      <td><a href="#">TreindustriensLandforesning</a>
+                                                                      </td>
+                                                                      <td>11402</td>
+                                                                      <td>3166322</td>
+                                                                      <td>yes</td>
+                                                                      <td>8811739</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                      <td><a href="#">TreindustriensLandforesning</a>
+                                                                      </td>
+                                                                      <td>11402</td>
+                                                                      <td>3166322</td>
+                                                                      <td>yes</td>
+                                                                      <td>8811739</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                      <td><a href="#">TreindustriensLandforesning</a>
+                                                                      </td>
+                                                                      <td>11402</td>
+                                                                      <td>3166322</td>
+                                                                      <td>yes</td>
+                                                                      <td>8811739</td>
+                                                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                                <div class="tab-pane fade" id="nav-profile" role="tabpanel"
+                                  aria-labelledby="nav-profile-tab">
+                                  <table class="table search_result" cellspacing="0">
+                                    <thead>
+                                      <tr>
+                                        <th>PackageClass</th>
+                                        
+                                      
+                                        <th>PackageBasics U/M</th>
+                                        <th>ConversionFactor</th>
+                                          <th>ConversionFactor M3</th>
+                                           <th>Calculated Quantity</th>
+                                          <th>EAN</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>F</td>
+                                        <td>LM</td>
+                                            <td>LM</td>
+                                            <td>1,000000</td>
+                                                <td>1,010.0000</td>
+                                                <td>4522658</td>
+                                               
+                                     
+                                      </tr>
+                                        <tr>
+                                          <td>F</td>
+                                          <td>LM</td>
+                                          <td>LM</td>
+                                          <td>1,000000</td>
+                                          <td>1,010.0000</td>
+                                          <td>4522658</td>
+
+
+                                        </tr>
+                                              <tr>
+                                                <td>F</td>
+                                                <td>LM</td>
+                                                <td>LM</td>
+                                                <td>1,000000</td>
+                                                <td>1,010.0000</td>
+                                                <td>4522658</td>
+
+
+                                              </tr>
+                                                    <tr>
+                                                      <td>F</td>
+                                                      <td>LM</td>
+                                                      <td>LM</td>
+                                                      <td>1,000000</td>
+                                                      <td>1,010.0000</td>
+                                                      <td>4522658</td>
+
+
+                                                    </tr>
+                                                          <tr>
+                                                            <td>F</td>
+                                                            <td>LM</td>
+                                                            <td>LM</td>
+                                                            <td>1,000000</td>
+                                                            <td>1,010.0000</td>
+                                                            <td>4522658</td>
+
+
+                                                          </tr>
+                                                                <tr>
+                                                                  <td>F</td>
+                                                                  <td>LM</td>
+                                                                  <td>LM</td>
+                                                                  <td>1,000000</td>
+                                                                  <td>1,010.0000</td>
+                                                                  <td>4522658</td>
+
+
+                                                                </tr>
+                                                                      <tr>
+                                                                        <td>F</td>
+                                                                        <td>LM</td>
+                                                                        <td>LM</td>
+                                                                        <td>1,000000</td>
+                                                                        <td>1,010.0000</td>
+                                                                        <td>4522658</td>
+
+
+                                                                      </tr>
+                                                                            <tr>
+                                                                              <td>F</td>
+                                                                              <td>LM</td>
+                                                                              <td>LM</td>
+                                                                              <td>1,000000</td>
+                                                                              <td>1,010.0000</td>
+                                                                              <td>4522658</td>
+
+
+                                                                            </tr>
+                                                                                  <tr>
+                                                                                    <td>F</td>
+                                                                                    <td>LM</td>
+                                                                                    <td>LM</td>
+                                                                                    <td>1,000000</td>
+                                                                                    <td>1,010.0000</td>
+                                                                                    <td>4522658</td>
+
+
+                                                                                  </tr>
+
+                                                                                        <tr>
+                                                                                          <td>F</td>
+                                                                                          <td>LM</td>
+                                                                                          <td>LM</td>
+                                                                                          <td>1,000000</td>
+                                                                                          <td>1,010.0000</td>
+                                                                                          <td>4522658</td>
+
+
+                                                                                        </tr>
+                                                                                              <tr>
+                                        <td>F</td>
+                                        <td>LM</td>
+                                            <td>LM</td>
+                                            <td>1,000000</td>
+                                                <td>1,010.0000</td>
+                                                <td>4522658</td>
+                                               
+                                     
+                                      </tr>
+
+                                            <tr>
+                                              <td>F</td>
+                                              <td>LM</td>
+                                              <td>LM</td>
+                                              <td>1,000000</td>
+                                              <td>1,010.0000</td>
+                                              <td>4522658</td>
+
+
+                                            </tr>
+
+                                                  <tr>
+                                                    <td>F</td>
+                                                    <td>LM</td>
+                                                    <td>LM</td>
+                                                    <td>1,000000</td>
+                                                    <td>1,010.0000</td>
+                                                    <td>4522658</td>
+
+
+                                                  </tr>
+
+                                                        <tr>
+                                                          <td>F</td>
+                                                          <td>LM</td>
+                                                          <td>LM</td>
+                                                          <td>1,000000</td>
+                                                          <td>1,010.0000</td>
+                                                          <td>4522658</td>
+
+
+                                                        </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                            
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </section> -->
+                     </div>
+                     
+
+              </div>
+              <div class="col-md-6 right_side last_side region_three">
+<div class="content-header">
+  <div class="container-fluid row">
+    <div class="col-md-10"><i class="nav-icon far fa-file-alt fleft"></i>
+      <h1> Price List</h1>
+    </div>
+    <!-- <div class="col-md-2 right_import"><button title="Import M3" class="btn btn_style"><i
+                                 class="nav-icon fas fa-download fleft"></button></i>
+
+                           </div> -->
+
+
+  </div><!-- /.container-fluid -->
+</div>
+<div class="container">
+  <div class=" right_import"><button data-toggle="modal" title="Copy" disabled class="btn btn_style copybtn"><i
+        class="nav-icon fas fas fa-copy fleft"></i></button><button title="Back" class="btn btn_style backbtn"><i
+        class="nav-icon fas fa-arrow-alt-circle-left fleft"></i></button>
+
+    <i class=""></i>
+  </div>
+  <section id="tabs" class="project-tab">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="tab-content">
+            <table class="table search_result purchase_history price_list_details table1 t1 pp1 ll1" cellspacing="0">
+              <thead>
+                <tr>
+                   <th> <input type="checkbox" name="checkall" id="checkall"
+                       onClick="check_uncheck_checkbox(this.checked);" value="Select All" /><span class="all"></span>
+                     </div>
+                   </th>
+                  <th>Item number </th>
+                  <th>Item Description</th>
+                  <th>Unit</th>
+                  <th>Supplier No</th>
+
+                  <th>Supplier
+                    Item number</th>
+                  <th>EAN
+                    Code</th>
+                  <th>Cost
+                    price</th>
+                  <th>Purchase
+                    price</th>
+                  <th>Sales
+                    price</th>
+
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                   <td>
+                     <input name="language" type="checkbox" />
+                   </td>
+                  <td>
+                    7055009
+                  </td>
+                  <td>
+                    Universal Liquid Fertilizer 1L -
+                  </td>
+                  <td>
+                    PCE
+                  </td>
+                  <td>
+                    110813
+                  </td>
+
+                  <td>4008557044009</td>
+                  <td>--</td>
+                  <td>15.55/SEK</td>
+                  <td>12.8/SEK</td>
+                  <td>14.81/NOK</td>
+                </tr>
+                <tr>
+                   <td>
+                     <input name="language" type="checkbox" />
+                   </td>
+                  <td>
+                    7044023
+                  </td>
+                  <td>
+                    Nutriment Stick 30 Pk Green
+                  </td>
+                  <td>
+                    PCE
+                  </td>
+                  <td>
+                    110813
+                  </td>
+
+                  <td>4008557044023</td>
+                  <td>--</td>
+                  <td>7.9/SEK</td>
+                  <td>6.5/SEK</td>
+                  <td>7.52/NOK</td>
+                </tr>
+                <tr>
+                   <td>
+                     <input name="language" type="checkbox" />
+                   </td>
+                  <td>
+                    7044030
+                  </td>
+                  <td>
+                    Nutriment Stick 30 Pk Flower
+                  </td>
+                  <td>
+                    PCE
+                  </td>
+                  <td>
+                    110813
+                  </td>
+
+                  <td>4008557044030</td>
+                  <td>--</td>
+                  <td>7.9/SEK</td>
+                  <td>6.5/SEK</td>
+                  <td>7.52/NOK</td>
+                </tr>
+                <tr>
+                   <td>
+                     <input name="language" type="checkbox" />
+                   </td>
+                  <td>
+                    7104809
+                  </td>
+                  <td>
+                    REED DIFFUSER 45 ml Tropical Cooldown
+                  </td>
+                  <td>
+                    PCE
+                  </td>
+                  <td>
+                    110021
+                  </td>
+
+                  <td>103626800412</td>
+                  <td>--</td>
+                  <td>21.52/EUR</td>
+                  <td>2/EUR</td>
+                  <td>26.52/NOK</td>
+                </tr>
+                <tr>
+                   <td>
+                     <input name="language" type="checkbox" />
+                   </td>
+                  <td>
+                    7131669
+                  </td>
+                  <td>
+                    Grave Light 35H 2Pc
+                  </td>
+                  <td>
+                    PCE
+                  </td>
+                  <td>
+                    110021
+                  </td>
+
+                  <td>102420199800</td>
+                  <td>8717847131669</td>
+                  <td>2.43/EUR</td>
+                  <td>0.5/EUR</td>
+                  <td>6.36/NOK</td>
+                </tr>
+                 <tr>
+                    <td>
+                      <input name="language" type="checkbox" />
+                    </td>
+                   <td>
+                     7055009
+                   </td>
+                   <td>
+                     Universal Liquid Fertilizer 1L -
+                   </td>
+                   <td>
+                     PCE
+                   </td>
+                   <td>
+                     110813
+                   </td>
+
+                   <td>4008557044009</td>
+                   <td>--</td>
+                   <td>15.55/SEK</td>
+                   <td>12.8/SEK</td>
+                   <td>14.81/NOK</td>
+                 </tr>
+                 <tr>
+                    <td>
+                      <input name="language" type="checkbox" />
+                    </td>
+                   <td>
+                     7044023
+                   </td>
+                   <td>
+                     Nutriment Stick 30 Pk Green
+                   </td>
+                   <td>
+                     PCE
+                   </td>
+                   <td>
+                     110813
+                   </td>
+
+                   <td>4008557044023</td>
+                   <td>--</td>
+                   <td>7.9/SEK</td>
+                   <td>6.5/SEK</td>
+                   <td>7.52/NOK</td>
+                 </tr>
+                 <tr>
+                    <td>
+                      <input name="language" type="checkbox" />
+                    </td>
+                   <td>
+                     7044030
+                   </td>
+                   <td>
+                     Nutriment Stick 30 Pk Flower
+                   </td>
+                   <td>
+                     PCE
+                   </td>
+                   <td>
+                     110813
+                   </td>
+
+                   <td>4008557044030</td>
+                   <td>--</td>
+                   <td>7.9/SEK</td>
+                   <td>6.5/SEK</td>
+                   <td>7.52/NOK</td>
+                 </tr>
+                 <tr>
+              </tbody>
+              <tbody>
+
+
+              </tbody>
+            </table>
+            <table class="table search_result purchase_history price_list_details table2 t2 pp2 ll2" cellspacing="0"
+              style="display: none;">
+              <thead>
+                <tr>
+                       <th> <input type="checkbox" name="checkall" id="checkall"
+                           onClick="check_uncheck_checkbox(this.checked);" value="Select All" /><span
+                           class="all"></span></div>
+                       </th>
+                  <th>Item number</th>
+                  <th>Item Description</th>
+                  <th>Unit</th>
+                  <th>Supplier No</th>
+
+                  <th>Supplier
+                    Item number</th>
+                  <th>EAN
+                    Code</th>
+                  <th>Cost
+                    price</th>
+                  <th>Purchase
+                    price</th>
+                  <th>Sales
+                    price</th>
+
+
+                </tr>
+              </thead>
+              <tbody>
+
+            
+                               <tr>
+                                    <td>
+                                      <input name="language" type="checkbox" />
+                                    </td>
+                                 <td>
+                                   7044009
+                                 </td>
+                                 <td>
+                                   Universal Liquid Fertilizer 1L -
+                                 </td>
+                                 <td>
+                                   PCE
+                                 </td>
+                                 <td>
+                                   125252
+                                 </td>
+
+                                 <td>4008557044009</td>
+                                 <td>--</td>
+                                 <td>15.55/SEK</td>
+                                 <td>12.8/SEK</td>
+                                 <td>14.81/NOK</td>
+                               </tr>
+                               <tr>
+                                    <td>
+                                      <input name="language" type="checkbox" />
+                                    </td>
+                                 <td>
+                                   7044030
+                                 </td>
+                                 <td>
+                                   Nutriment Stick 30 Pk Flower
+                                 </td>
+                                 <td>
+                                   PCE
+                                 </td>
+                                 <td>
+                                   110813
+                                 </td>
+
+                                 <td>4008557044030</td>
+                                 <td>--</td>
+                                 <td>7.9/SEK</td>
+                                 <td>6.5/SEK</td>
+                                 <td>7.52/NOK</td>
+                               </tr>
+                               <tr>
+                                    <td>
+                                      <input name="language" type="checkbox" />
+                                    </td>
+                                 <td>
+                                   7044023
+                                 </td>
+                                 <td>
+                                   Nutriment Stick 30 Pk Green
+                                 </td>
+                                 <td>
+                                   PCE
+                                 </td>
+                                 <td>
+                                   110813
+                                 </td>
+
+                                 <td>4008557044023</td>
+                                 <td>--</td>
+                                 <td>7.9/SEK</td>
+                                 <td>6.5/SEK</td>
+                                 <td>7.52/NOK</td>
+                               </tr>
+                               <tr>
+                                    <td>
+                                      <input name="language" type="checkbox" />
+                                    </td>
+                                 <td>
+                                   7131669
+                                 </td>
+                                 <td>
+                                   Grave Light 35H 2Pc
+                                 </td>
+                                 <td>
+                                   PCE
+                                 </td>
+                                 <td>
+                                   110021
+                                 </td>
+
+                                 <td>102420199800</td>
+                                 <td>8717847131669</td>
+                                 <td>2.43/EUR</td>
+                                 <td>0.5/EUR</td>
+                                 <td>6.36/NOK</td>
+                               </tr>
+               
+                    <tr>
+                         <td>
+                           <input name="language" type="checkbox" />
+                         </td>
+                      <td>
+                        7104809
+                      </td>
+                      <td>
+                        REED DIFFUSER 45 ml Tropical Cooldown
+                      </td>
+                      <td>
+                        PCE
+                      </td>
+                      <td>
+                        110021
+                      </td>
+
+                      <td>103626800412</td>
+                      <td>--</td>
+                      <td>21.52/EUR</td>
+                      <td>2/EUR</td>
+                      <td>26.52/NOK</td>
+                    </tr>
+                     <tr>
+                          <td>
+                            <input name="language" type="checkbox" />
+                          </td>
+                       <td>
+                         7044009
+                       </td>
+                       <td>
+                         Universal Liquid Fertilizer 1L -
+                       </td>
+                       <td>
+                         PCE
+                       </td>
+                       <td>
+                         125252
+                       </td>
+
+                       <td>4008557044009</td>
+                       <td>--</td>
+                       <td>15.55/SEK</td>
+                       <td>12.8/SEK</td>
+                       <td>14.81/NOK</td>
+                     </tr>
+                      <tr>
+                           <td>
+                             <input name="language" type="checkbox" />
+                           </td>
+                        <td>
+                          7044030
+                        </td>
+                        <td>
+                          Nutriment Stick 30 Pk Flower
+                        </td>
+                        <td>
+                          PCE
+                        </td>
+                        <td>
+                          110813
+                        </td>
+
+                        <td>4008557044030</td>
+                        <td>--</td>
+                        <td>7.9/SEK</td>
+                        <td>6.5/SEK</td>
+                        <td>7.52/NOK</td>
+                      </tr>
+    <tr>
+         <td>
+           <input name="language" type="checkbox" />
+         </td>
+      <td>
+        7044023
+      </td>
+      <td>
+        Nutriment Stick 30 Pk Green
+      </td>
+      <td>
+        PCE
+      </td>
+      <td>
+        110813
+      </td>
+
+      <td>4008557044023</td>
+      <td>--</td>
+      <td>7.9/SEK</td>
+      <td>6.5/SEK</td>
+      <td>7.52/NOK</td>
+    </tr>
+                <tr>
+                     <td>
+                       <input name="language" type="checkbox" />
+                     </td>
+                  <td>
+                    7131669
+                  </td>
+                  <td>
+                    Grave Light 35H 2Pc
+                  </td>
+                  <td>
+                    PCE
+                  </td>
+                  <td>
+                    110021
+                  </td>
+
+                  <td>102420199800</td>
+                  <td>8717847131669</td>
+                  <td>2.43/EUR</td>
+                  <td>0.5/EUR</td>
+                  <td>6.36/NOK</td>
+                </tr>
+            
+              </tbody>
+              <tbody>
+
+
+              </tbody>
+            </table>
+            <table class="table search_result purchase_history price_list_details table3 pp3 ll3" cellspacing="0"
+              style="display: none;">
+              <thead>
+                <tr>
+                    <th> <input type="checkbox" name="checkall" id="checkall"
+                        onClick="check_uncheck_checkbox(this.checked);" value="Select All" /><span class="all"></span>
+                      </div>
+                    </th>
+                  <th>Item number </th>
+                  <th>Item Description</th>
+                  <th>Unit</th>
+                  <th>Supplier No</th>
+
+                  <th>Supplier
+                    Item number</th>
+                  <th>EAN
+                    Code</th>
+                  <th>Cost
+                    price</th>
+                  <th>Purchase
+                    price</th>
+                  <th>Sales
+                    price</th>
+
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                   <td>
+                     <input name="language" type="checkbox" />
+                   </td>
+                  <td>
+                    7131669
+                  </td>
+                  <td>
+                    Grave Light 35H 2Pc
+                  </td>
+                  <td>
+                    PCE
+                  </td>
+                  <td>
+                    110021
+                  </td>
+
+                  <td>102420199800</td>
+                  <td>8717847131669</td>
+                  <td>2.43/EUR</td>
+                  <td>0.5/EUR</td>
+                  <td>6.36/NOK</td>
+                </tr>
+                <tr>
+                   <td>
+                     <input name="language" type="checkbox" />
+                   </td>
+                  <td>
+                    7044023
+                  </td>
+                  <td>
+                    Nutriment Stick 30 Pk Green
+                  </td>
+                  <td>
+                    PCE
+                  </td>
+                  <td>
+                    110813
+                  </td>
+
+                  <td>4008557044023</td>
+                  <td>--</td>
+                  <td>7.9/SEK</td>
+                  <td>6.5/SEK</td>
+                  <td>7.52/NOK</td>
+                </tr>
+                <tr>
+                   <td>
+                     <input name="language" type="checkbox" />
+                   </td>
+                  <td>
+                    7104809
+                  </td>
+                  <td>
+                    REED DIFFUSER 45 ml Tropical Cooldown
+                  </td>
+                  <td>
+                    PCE
+                  </td>
+                  <td>
+                    110021
+                  </td>
+
+                  <td>103626800412</td>
+                  <td>--</td>
+                  <td>21.52/EUR</td>
+                  <td>2/EUR</td>
+                  <td>26.52/NOK</td>
+                </tr>
+                <tr>
+                   <td>
+                     <input name="language" type="checkbox" />
+                   </td>
+                  <td>
+                    7044009
+                  </td>
+                  <td>
+                    Universal Liquid Fertilizer 1L -
+                  </td>
+                  <td>
+                    PCE
+                  </td>
+                  <td>
+                    110813
+                  </td>
+
+                  <td>4008557044009</td>
+                  <td>--</td>
+                  <td>15.55/SEK</td>
+                  <td>12.8/SEK</td>
+                  <td>14.81/NOK</td>
+                </tr>
+                <tr>
+                   <td>
+                     <input name="language" type="checkbox" />
+                   </td>
+                  <td>
+                    7044030
+                  </td>
+                  <td>
+                    Nutriment Stick 30 Pk Flower
+                  </td>
+                  <td>
+                    PCE
+                  </td>
+                  <td>
+                    110813
+                  </td>
+
+                  <td>4008557044030</td>
+                  <td>--</td>
+                  <td>7.9/SEK</td>
+                  <td>6.5/SEK</td>
+                  <td>7.52/NOK</td>
+                </tr>
+
+
+
+              </tbody>
+              <tbody>
+
+
+              </tbody>
+            </table>
+                <table class="table search_result purchase_history price_list_details table4 pp4 ll4" cellspacing="0"
+                  style="display: none;">
+                  <thead>
+                    <tr>
+                        <th> <input type="checkbox" name="checkall" id="checkall"
+                            onClick="check_uncheck_checkbox(this.checked);" value="Select All" /><span
+                            class="all"></span></div>
+                        </th>
+                      <th>Item number2 </th>
+                      <th>Item Description</th>
+                      <th>Unit</th>
+                      <th>Supplier No</th>
+
+                      <th>Supplier
+                        Item number</th>
+                      <th>EAN
+                        Code</th>
+                      <th>Cost
+                        price</th>
+                      <th>Purchase
+                        price</th>
+                      <th>Sales
+                        price</th>
+
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                       <td>
+                         <input name="language" type="checkbox" />
+                       </td>
+                      <td>
+                        7044030
+                      </td>
+                      <td>
+                        Nutriment Stick 30 Pk Flower
+                      </td>
+                      <td>
+                        PCE
+                      </td>
+                      <td>
+                        110813
+                      </td>
+
+                      <td>4008557044030</td>
+                      <td>--</td>
+                      <td>7.9/SEK</td>
+                      <td>6.5/SEK</td>
+                      <td>7.52/NOK</td>
+                    </tr>
+                    <tr>
+                       <td>
+                         <input name="language" type="checkbox" />
+                       </td>
+                      <td>
+                        7044023
+                      </td>
+                      <td>
+                        Nutriment Stick 30 Pk Green
+                      </td>
+                      <td>
+                        PCE
+                      </td>
+                      <td>
+                        110813
+                      </td>
+
+                      <td>4008557044023</td>
+                      <td>--</td>
+                      <td>7.9/SEK</td>
+                      <td>6.5/SEK</td>
+                      <td>7.52/NOK</td>
+                    </tr>
+                    <tr>
+                       <td>
+                         <input name="language" type="checkbox" />
+                       </td>
+                      <td>
+                        7104809
+                      </td>
+                      <td>
+                        REED DIFFUSER 45 ml Tropical Cooldown
+                      </td>
+                      <td>
+                        PCE
+                      </td>
+                      <td>
+                        110021
+                      </td>
+
+                      <td>103626800412</td>
+                      <td>--</td>
+                      <td>21.52/EUR</td>
+                      <td>2/EUR</td>
+                      <td>26.52/NOK</td>
+                    </tr>
+                     <tr>
+                        <td>
+                          <input name="language" type="checkbox" />
+                        </td>
+                       <td>
+                         7131669
+                       </td>
+                       <td>
+                         Grave Light 35H 2Pc
+                       </td>
+                       <td>
+                         PCE
+                       </td>
+                       <td>
+                         110021
+                       </td>
+
+                       <td>102420199800</td>
+                       <td>8717847131669</td>
+                       <td>2.43/EUR</td>
+                       <td>0.5/EUR</td>
+                       <td>6.36/NOK</td>
+                     </tr>
+                      <tr>
+                         <td>
+                           <input name="language" type="checkbox" />
+                         </td>
+                        <td>
+                          7044030
+                        </td>
+                        <td>
+                          Nutriment Stick 30 Pk Flower
+                        </td>
+                        <td>
+                          PCE
+                        </td>
+                        <td>
+                          110813
+                        </td>
+
+                        <td>4008557044030</td>
+                        <td>--</td>
+                        <td>7.9/SEK</td>
+                        <td>6.5/SEK</td>
+                        <td>7.52/NOK</td>
+                      </tr>
+                      <tr>
+                         <td>
+                           <input name="language" type="checkbox" />
+                         </td>
+                        <td>
+                          7044023
+                        </td>
+                        <td>
+                          Nutriment Stick 30 Pk Green
+                        </td>
+                        <td>
+                          PCE
+                        </td>
+                        <td>
+                          110813
+                        </td>
+
+                        <td>4008557044023</td>
+                        <td>--</td>
+                        <td>7.9/SEK</td>
+                        <td>6.5/SEK</td>
+                        <td>7.52/NOK</td>
+                      </tr>
+                      <tr>
+                         <td>
+                           <input name="language" type="checkbox" />
+                         </td>
+                        <td>
+                          7104809
+                        </td>
+                        <td>
+                          REED DIFFUSER 45 ml Tropical Cooldown
+                        </td>
+                        <td>
+                          PCE
+                        </td>
+                        <td>
+                          110021
+                        </td>
+
+                        <td>103626800412</td>
+                        <td>--</td>
+                        <td>21.52/EUR</td>
+                        <td>2/EUR</td>
+                        <td>26.52/NOK</td>
+                      </tr>
+                      <tr>
+                         <td>
+                           <input name="language" type="checkbox" />
+                         </td>
+                        <td>
+                          7131669
+                        </td>
+                        <td>
+                          Grave Light 35H 2Pc
+                        </td>
+                        <td>
+                          PCE
+                        </td>
+                        <td>
+                          110021
+                        </td>
+
+                        <td>102420199800</td>
+                        <td>8717847131669</td>
+                        <td>2.43/EUR</td>
+                        <td>0.5/EUR</td>
+                        <td>6.36/NOK</td>
+                      </tr>
+                    <tr>
+                       <td>
+                         <input name="language" type="checkbox" />
+                       </td>
+                      <td>
+                        7044009
+                      </td>
+                      <td>
+                        Universal Liquid Fertilizer 1L -
+                      </td>
+                      <td>
+                        PCE
+                      </td>
+                      <td>
+                        110813
+                      </td>
+
+                      <td>4008557044009</td>
+                      <td>--</td>
+                      <td>15.55/SEK</td>
+                      <td>12.8/SEK</td>
+                      <td>14.81/NOK</td>
+                    </tr>
+                   
+
+
+
+                  </tbody>
+                  <tbody>
+
+
+                  </tbody>
+                </table>
+                     <table class="table search_result purchase_history price_list_details table5 pp5 ll5"
+                       cellspacing="0" style="display: none;">
+                       <thead>
+                         <tr>
+                             <th> <input type="checkbox" name="checkall" id="checkall"
+                                 onClick="check_uncheck_checkbox(this.checked);" value="Select All" /><span
+                                 class="all"></span></div>
+                             </th>
+                           <th>Item number2 </th>
+                           <th>Item Description</th>
+                           <th>Unit</th>
+                           <th>Supplier No</th>
+
+                           <th>Supplier
+                             Item number</th>
+                           <th>EAN
+                             Code</th>
+                           <th>Cost
+                             price</th>
+                           <th>Purchase
+                             price</th>
+                           <th>Sales
+                             price</th>
+
+
+                         </tr>
+                       </thead>
+                       <tbody>
+                          <td>
+                            <input name="language" type="checkbox" />
+                          </td>
+                           <td>
+                             7044023
+                           </td>
+                           <td>
+                             Nutriment Stick 30 Pk Green
+                           </td>
+                           <td>
+                             PCE
+                           </td>
+                           <td>
+                             110813
+                           </td>
+
+                           <td>4008557044023</td>
+                           <td>--</td>
+                           <td>7.9/SEK</td>
+                           <td>6.5/SEK</td>
+                           <td>7.52/NOK</td>
+                         </tr>
+                         <tr>
+                            <td>
+                              <input name="language" type="checkbox" />
+                            </td>
+                           <td>
+                             7104809
+                           </td>
+                           <td>
+                             REED DIFFUSER 45 ml Tropical Cooldown
+                           </td>
+                           <td>
+                             PCE
+                           </td>
+                           <td>
+                             110021
+                           </td>
+
+                           <td>103626800412</td>
+                           <td>--</td>
+                           <td>21.52/EUR</td>
+                           <td>2/EUR</td>
+                           <td>26.52/NOK</td>
+                         </tr>
+                         <tr>
+                            <td>
+                              <input name="language" type="checkbox" />
+                            </td>
+                           <td>
+                             7044030
+                           </td>
+                           <td>
+                             Nutriment Stick 30 Pk Flower
+                           </td>
+                           <td>
+                             PCE
+                           </td>
+                           <td>
+                             110813
+                           </td>
+
+                           <td>4008557044030</td>
+                           <td>--</td>
+                           <td>7.9/SEK</td>
+                           <td>6.5/SEK</td>
+                           <td>7.52/NOK</td>
+                         </tr>
+                         <tr>
+                         <tr>
+                            <td>
+                              <input name="language" type="checkbox" />
+                            </td>
+                           <td>
+                             7131669
+                           </td>
+                           <td>
+                             Grave Light 35H 2Pc
+                           </td>
+                           <td>
+                             PCE
+                           </td>
+                           <td>
+                             110021
+                           </td>
+
+                           <td>102420199800</td>
+                           <td>8717847131669</td>
+                           <td>2.43/EUR</td>
+                           <td>0.5/EUR</td>
+                           <td>6.36/NOK</td>
+                         </tr>
+                          <td>
+                            <input name="language" type="checkbox" />
+                          </td>
+                        
+                           <td>
+                             7104809
+                           </td>
+                           <td>
+                             REED DIFFUSER 45 ml Tropical Cooldown
+                           </td>
+                           <td>
+                             PCE
+                           </td>
+                           <td>
+                             110021
+                           </td>
+
+                           <td>103626800412</td>
+                           <td>--</td>
+                           <td>21.52/EUR</td>
+                           <td>2/EUR</td>
+                           <td>26.52/NOK</td>
+                         </tr>
+                         <tr>
+                            <td>
+                              <input name="language" type="checkbox" />
+                            </td>
+                           <td>
+                             7131669
+                           </td>
+                           <td>
+                             Grave Light 35H 2Pc
+                           </td>
+                           <td>
+                             PCE
+                           </td>
+                           <td>
+                             110021
+                           </td>
+
+                           <td>102420199800</td>
+                           <td>8717847131669</td>
+                           <td>2.43/EUR</td>
+                           <td>0.5/EUR</td>
+                           <td>6.36/NOK</td>
+                         </tr>
+                         <tr>
+                            <td>
+                              <input name="language" type="checkbox" />
+                            </td>
+                           <td>
+                             7044009
+                           </td>
+                           <td>
+                             Universal Liquid Fertilizer 1L -
+                           </td>
+                           <td>
+                             PCE
+                           </td>
+                           <td>
+                             110813
+                           </td>
+
+                           <td>4008557044009</td>
+                           <td>--</td>
+                           <td>15.55/SEK</td>
+                           <td>12.8/SEK</td>
+                           <td>14.81/NOK</td>
+                         </tr>
+
+
+
+
+                       </tbody>
+                       <tbody>
+
+
+                       </tbody>
+                     </table>
+
+          </div>
+          <!-- <nav>
+                     <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                       <a class="nav-item nav-link active" id="nav-info-tab" data-toggle="tab" href="#nav-info"
+                         role="tab" aria-controls="nav-info" aria-selected="true"><i
+                           class="nav-icon fas fa-info-circle fleft"></i>Info
+                       </a>
+                       <a class="nav-item nav-link " id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+                         aria-controls="nav-home" aria-selected="true"><i
+                           class="nav-icon fas fa-users fleft"></i>Suppliers
+                       </a>
+                       <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
+                         role="tab" aria-controls="nav-profile" aria-selected="false"><i
+                           class="fas fa-cube nav-icon fleft"></i>Packages</a>
+
+                     </div>
+                   </nav> -->
+          <!-- <div class="tab-content" id="nav-tabContent">
+                     <div class="tab-pane fade show active" id="nav-info" role="tabpanel"
+                       aria-labelledby="nav-info-tab">
+                      
+                       <div class="info_tab_list">
+                         <table>
+                           <tr>
+                             <td>
+                               <b>Information</b>
+                             </td>
+                             <td>
+                               <b> Description</b><br />
+                               Lorem Ipsum is simply dummy text of the printing printing and typesetting
+                               industry Lorem Ipsum is simply dummy text of the printing printing and
+                               typesetting
+                               industry Lorem Ipsum is simply dummy text of the printing printing and
+                               typesetting
+                               industry
+                               Item Type
+                             </td>
+                           </tr>
+                           <tr>
+                             <td>
+                               <b>Item Number:</b>
+                             </td>
+                             <td>
+                               125668585
+                             </td>
+                           </tr>
+                           <tr>
+                             <td>
+                               <b> Item Type:</b>
+                             </td>
+                             <td>
+                               ---
+                             </td>
+                           </tr>
+                           <tr>
+
+
+                             <td>
+                               <b> Item supplier:</b>
+                             </td>
+                             <td>
+                               ---
+                             </td>
+                           </tr>
+
+
+
+
+                           </tr>
+                         </table>
+                       </div>
+                     </div>
+                     <div class="tab-pane fade " id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                       <table class="table search_result" cellspacing="0">
+                         <thead>
+                           <tr>
+                             <th>Supplier Name</th>
+                             <th>Supplier Code</th>
+                             <th>External Supplier No</th>
+                             <th>Is Main Supplier </th>
+                             <th>Supplier Item Number</th>
+                           </tr>
+                         </thead>
+                         <tbody>
+                           <tr>
+                             <td><a href="#">TreindustriensLandforesning</a></td>
+                             <td>11402</td>
+                             <td>3166322</td>
+                             <td>yes</td>
+                             <td>8811739</td>
+                           </tr>
+                           <tr>
+                             <td><a href="#">TreindustriensLandforesning</a></td>
+                             <td>11402</td>
+                             <td>3166322</td>
+                             <td>yes</td>
+                             <td>8811739</td>
+                           </tr>
+                           <tr>
+                             <td><a href="#">TreindustriensLandforesning</a></td>
+                             <td>11402</td>
+                             <td>3166322</td>
+                             <td>yes</td>
+                             <td>8811739</td>
+                           </tr>
+                           <tr>
+                             <td><a href="#">TreindustriensLandforesning</a></td>
+                             <td>11402</td>
+                             <td>3166322</td>
+                             <td>yes</td>
+                             <td>8811739</td>
+                           </tr>
+                           <tr>
+                             <td><a href="#">TreindustriensLandforesning</a></td>
+                             <td>11402</td>
+                             <td>3166322</td>
+                             <td>yes</td>
+                             <td>8811739</td>
+                           </tr>
+                           <tr>
+                             <td><a href="#">TreindustriensLandforesning</a></td>
+                             <td>11402</td>
+                             <td>3166322</td>
+                             <td>yes</td>
+                             <td>8811739</td>
+                           </tr>
+                           <tr>
+                             <td><a href="#">TreindustriensLandforesning</a></td>
+                             <td>11402</td>
+                             <td>3166322</td>
+                             <td>yes</td>
+                             <td>8811739</td>
+                           </tr>
+                           <tr>
+                             <td><a href="#">TreindustriensLandforesning</a></td>
+                             <td>11402</td>
+                             <td>3166322</td>
+                             <td>yes</td>
+                             <td>8811739</td>
+                           </tr>
+                           <tr>
+                             <td><a href="#">TreindustriensLandforesning</a></td>
+                             <td>11402</td>
+                             <td>3166322</td>
+                             <td>yes</td>
+                             <td>8811739</td>
+                           </tr>
+                           <tr>
+                             <td><a href="#">TreindustriensLandforesning</a></td>
+                             <td>11402</td>
+                             <td>3166322</td>
+                             <td>yes</td>
+                             <td>8811739</td>
+                           </tr>
+                           <tr>
+                             <td><a href="#">TreindustriensLandforesning</a></td>
+                             <td>11402</td>
+                             <td>3166322</td>
+                             <td>yes</td>
+                             <td>8811739</td>
+                           </tr>
+                           <tr>
+                             <td><a href="#">TreindustriensLandforesning</a></td>
+                             <td>11402</td>
+                             <td>3166322</td>
+                             <td>yes</td>
+                             <td>8811739</td>
+                           </tr>
+                           <tr>
+                             <td><a href="#">TreindustriensLandforesning</a></td>
+                             <td>11402</td>
+                             <td>3166322</td>
+                             <td>yes</td>
+                             <td>8811739</td>
+                           </tr>
+                           <tr>
+                             <td><a href="#">TreindustriensLandforesning</a></td>
+                             <td>11402</td>
+                             <td>3166322</td>
+                             <td>yes</td>
+                             <td>8811739</td>
+                           </tr>
+                           <tr>
+                             <td><a href="#">TreindustriensLandforesning</a></td>
+                             <td>11402</td>
+                             <td>3166322</td>
+                             <td>yes</td>
+                             <td>8811739</td>
+                           </tr>
+                           <tr>
+                             <td><a href="#">TreindustriensLandforesning</a>
+                             </td>
+                             <td>11402</td>
+                             <td>3166322</td>
+                             <td>yes</td>
+                             <td>8811739</td>
+                           </tr>
+                           <tr>
+                             <td><a href="#">TreindustriensLandforesning</a>
+                             </td>
+                             <td>11402</td>
+                             <td>3166322</td>
+                             <td>yes</td>
+                             <td>8811739</td>
+                           </tr>
+                           <tr>
+                             <td><a href="#">TreindustriensLandforesning</a>
+                             </td>
+                             <td>11402</td>
+                             <td>3166322</td>
+                             <td>yes</td>
+                             <td>8811739</td>
+                           </tr>
+                         </tbody>
+                       </table>
+                     </div>
+                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                       <table class="table search_result" cellspacing="0">
+                         <thead>
+                           <tr>
+                             <th>PackageClass</th>
+
+
+                             <th>PackageBasics U/M</th>
+                             <th>ConversionFactor</th>
+                             <th>ConversionFactor M3</th>
+                             <th>Calculated Quantity</th>
+                             <th>EAN</th>
+                           </tr>
+                         </thead>
+                         <tbody>
+                           <tr>
+                             <td>F</td>
+                             <td>LM</td>
+                             <td>LM</td>
+                             <td>1,000000</td>
+                             <td>1,010.0000</td>
+                             <td>4522658</td>
+
+
+                           </tr>
+                           <tr>
+                             <td>F</td>
+                             <td>LM</td>
+                             <td>LM</td>
+                             <td>1,000000</td>
+                             <td>1,010.0000</td>
+                             <td>4522658</td>
+
+
+                           </tr>
+                           <tr>
+                             <td>F</td>
+                             <td>LM</td>
+                             <td>LM</td>
+                             <td>1,000000</td>
+                             <td>1,010.0000</td>
+                             <td>4522658</td>
+
+
+                           </tr>
+                           <tr>
+                             <td>F</td>
+                             <td>LM</td>
+                             <td>LM</td>
+                             <td>1,000000</td>
+                             <td>1,010.0000</td>
+                             <td>4522658</td>
+
+
+                           </tr>
+                           <tr>
+                             <td>F</td>
+                             <td>LM</td>
+                             <td>LM</td>
+                             <td>1,000000</td>
+                             <td>1,010.0000</td>
+                             <td>4522658</td>
+
+
+                           </tr>
+                           <tr>
+                             <td>F</td>
+                             <td>LM</td>
+                             <td>LM</td>
+                             <td>1,000000</td>
+                             <td>1,010.0000</td>
+                             <td>4522658</td>
+
+
+                           </tr>
+                           <tr>
+                             <td>F</td>
+                             <td>LM</td>
+                             <td>LM</td>
+                             <td>1,000000</td>
+                             <td>1,010.0000</td>
+                             <td>4522658</td>
+
+
+                           </tr>
+                           <tr>
+                             <td>F</td>
+                             <td>LM</td>
+                             <td>LM</td>
+                             <td>1,000000</td>
+                             <td>1,010.0000</td>
+                             <td>4522658</td>
+
+
+                           </tr>
+                           <tr>
+                             <td>F</td>
+                             <td>LM</td>
+                             <td>LM</td>
+                             <td>1,000000</td>
+                             <td>1,010.0000</td>
+                             <td>4522658</td>
+
+
+                           </tr>
+
+                           <tr>
+                             <td>F</td>
+                             <td>LM</td>
+                             <td>LM</td>
+                             <td>1,000000</td>
+                             <td>1,010.0000</td>
+                             <td>4522658</td>
+
+
+                           </tr>
+                           <tr>
+                             <td>F</td>
+                             <td>LM</td>
+                             <td>LM</td>
+                             <td>1,000000</td>
+                             <td>1,010.0000</td>
+                             <td>4522658</td>
+
+
+                           </tr>
+
+                           <tr>
+                             <td>F</td>
+                             <td>LM</td>
+                             <td>LM</td>
+                             <td>1,000000</td>
+                             <td>1,010.0000</td>
+                             <td>4522658</td>
+
+
+                           </tr>
+
+                           <tr>
+                             <td>F</td>
+                             <td>LM</td>
+                             <td>LM</td>
+                             <td>1,000000</td>
+                             <td>1,010.0000</td>
+                             <td>4522658</td>
+
+
+                           </tr>
+
+                           <tr>
+                             <td>F</td>
+                             <td>LM</td>
+                             <td>LM</td>
+                             <td>1,000000</td>
+                             <td>1,010.0000</td>
+                             <td>4522658</td>
+
+
+                           </tr>
+                         </tbody>
+                       </table>
+                     </div>
+
+                   </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+              </div>
+        </div>
+     
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <!-- <footer class="main-footer">
+    <strong>Copyright &copy;  <a href="#">Price and Discound</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 
+    </div>
+  </footer> -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+
+<div id="gprice_modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><i class="fas fa-copy" style="margin-right: 10px"></i>Copy </h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+      </div>
+      <div class="modal-body">
+
+   <p class="COPYFROM"><span class="date">Copy Selected Items From :<span class="Global">Global Promotions</span>
+     </span> </p>
+<p><span class="date">Copy To :</span> <select>
+    <option value="0">Select Price List</option>
+    <option value="1">Global Price</option>
+
+  </select></p>
+ 
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div id="gpromotion_modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><i class="fas fa-copy" style="margin-right: 10px"></i>Copy </h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+      </div>
+      <div class="modal-body">
+   <p class="COPYFROM"><span class="date">Copy Selected Items From :<span class="Global">Global Price</span>
+     </span> </p>
+<p>
+  <!-- <label>To</label> -->
+ <span class="date">Copy To :</span> <select>
+    <option value="0">Select Price List</option>
+    <option value="1">Global Promotions</option>
+
+  </select></p>
+  
+
+       
+        <!-- <p><span class="date">Copy To :</span> <input id="" type="text" /></p> -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!--Region Modal-->
+
+<div id="region_modal1" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><i class="fas fa-copy" style="margin-right: 10px"></i>Copy </h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+      </div>
+      <div class="modal-body">
+
+      <p class="COPYFROM"><span class="date">Copy Selected Items From :<span class="Global">3F220L</span>
+        </span> </p>
+        <p> <span class="date">Copy To :</span>
+          <select>
+            <option value="0">Select Price List</option>
+            <!-- <option value="1">3F220L</option> -->
+                  <option value="2">3F220M</option>
+                    <option value="3">3F220S</option>
+                    <option value="4">3F221L</option>
+                      <option value="5">3F220M</option>
+                      <option value="6">3F220S</option>
+
+          </select>
+        </p>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div id="region_modal2" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><i class="fas fa-copy" style="margin-right: 10px"></i>Copy </h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+      </div>
+      <div class="modal-body">
+
+      <p class="COPYFROM"><span class="date">Copy Selected Items From :<span class="Global">3F220M</span>
+        </span> </p>
+        <p>
+          <span class="date">Copy To :</span>
+            <select>
+              <option value="0">Select Price List</option>
+              <option value="1">3F220L</option>
+              <!-- <option value="2">3F220M</option> -->
+              <option value="3">3F220S</option>
+              <option value="4">3F221L</option>
+              <!-- <option value="5">3F220M</option> -->
+              <option value="6">3F220S</option>
+
+            </select>
+        </p>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div id="region_modal3" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><i class="fas fa-copy" style="margin-right: 10px"></i>Copy </h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+      </div>
+      <div class="modal-body">
+   <p class="COPYFROM"><span class="date">Copy Selected Items From :<span class="Global">3F220S</span>
+     </span> </p>
+        <p> <span class="date">Copy To :</span>
+          <select>
+            <option value="0">Select Price List</option>
+            <option value="1">3F220L</option>
+            <option value="2">3F220M</option>
+            <!-- <option value="3">3F220S</option> -->
+            <!-- <option value="4">3F221L</option> -->
+            <option value="5">3F220M</option>
+            <option value="6">3F220S</option>
+
+          </select>
+        </p>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Promotion Modal-->
+<div id="prom1" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><i class="fas fa-copy" style="margin-right: 10px"></i>Copy </h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+      </div>
+      <div class="modal-body">
+
+         <p class="COPYFROM"><span class="date">Copy Selected Items From :<span class="Global">promotions1</span>
+           </span> </p>
+        <p><span class="date">Copy To :</span>
+          <select>
+            <option value="0">Select Price List</option>
+            <option value="1">Promotion2</option>
+            <option value="2">promotion3</option>
+            <!-- <option value="3">3F220S</option> -->
+            <!-- <option value="4">3F221L</option> -->
+            <option value="5">3F220L</option>
+            <!-- <option value="6">3F220S</option> -->
+
+          </select>
+        </p>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div id="prom2" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><i class="fas fa-copy" style="margin-right: 10px"></i>Copy </h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+      </div>
+      <div class="modal-body">
+
+       <p class="COPYFROM"><span class="date">Copy Selected Items From :<span class="Global">promotions2</span>
+         </span> </p>
+        <p><span class="date">Copy To :</span>
+          <select>
+        <option value="0">Select Price List</option>
+        <option value="1">Promotion1</option>
+        <option value="2">promotion3</option>
+        <!-- <option value="3">3F220S</option> -->
+        <!-- <option value="4">3F221L</option> -->
+        <option value="5">3F220L</option>
+        <!-- <option value="6">3F220S</option> -->
+
+          </select>
+        </p>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div id="prom3" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><i class="fas fa-copy" style="margin-right: 10px"></i>Copy </h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+      </div>
+      <div class="modal-body">
+
+       <p class="COPYFROM"><span class="date">Copy Selected Items From :<span class="Global">promotions3</span>
+         </span> </p>
+        <p><span class="date">Copy To :</span>
+          <select>
+                <option value="0">Select Price List</option>
+                <option value="1">Promotion1</option>
+                <option value="2">promotion2</option>
+                <!-- <option value="3">3F220S</option> -->
+                <!-- <option value="4">3F221L</option> -->
+                <option value="5">3F220L</option>
+                <!-- <option value="6">3F220S</option> -->
+
+          </select>
+        </p>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div id="prom4" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><i class="fas fa-copy" style="margin-right: 10px"></i>Copy </h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+      </div>
+      <div class="modal-body">
+
+           <p class="COPYFROM"><span class="date">Copy Selected Items From :<span class="Global">3F220L</span>
+             </span> </p>
+        <p>
+          <span class="date">Copy To :</span>
+          <select>
+        <option value="0">Select Price List</option>
+        <option value="1">Promotion1</option>
+        <option value="2">promotion2</option>
+            <option value="2">promotion3</option>
+        <!-- <option value="3">3F220S</option> -->
+        <!-- <option value="4">3F221L</option> -->
+        <!-- <option value="5">3F220L</option> -->
+        <!-- <option value="6">3F220S</option> -->
+
+          </select>
+        </p>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
+
+

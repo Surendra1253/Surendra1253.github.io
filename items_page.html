@@ -1,0 +1,2759 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Price and Discounts</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="dist/css/style.css">
+
+  <script>
+    $(document).ready(function () {
+    $(".right_side").hide();
+     $('.table1').show();
+     $('.table2').hide();
+         $('.logout').click(function() {
+         // alert('hi');
+         window.location.href='login.html';
+         });
+    
+      $(".Result_container tr").click(function () {
+        $(this).addClass('active_bg').siblings().removeClass('active_bg');
+          // $(".Result_container tr").removeClass('active_bg');
+     $(".right_side").show();
+       $('.table1').hide();
+       $('.table2').hide();
+         $('.table3').hide();
+        $('.table4').hide();
+            $('.table5').hide();
+             $('.table6').hide();
+     
+      });
+       $(".Result_container tr.7044009").click(function () {
+       
+        $('.table1').show();
+        $('.table2').hide();
+       });
+          $(".Result_container tr.7044023").click(function () {
+        
+             $('.table2').show();
+             $('.table1').hide();
+          });
+              $(".Result_container tr.7044030").click(function () {
+          
+              $('.table2').hide();
+              $('.table1').hide();
+               $('.table3').show();
+              });
+                   $(".Result_container tr.7104809").click(function () {
+
+                   $('.table2').hide();
+                   $('.table1').hide();
+                   $('.table3').hide();
+                    $('.table4').show();
+                   
+                   });
+                          $(".Result_container tr.7131669").click(function () {
+
+                          $('.table2').hide();
+                          $('.table1').hide();
+                          $('.table3').hide();
+                          $('.table4').hide();
+                           $('.table5').show();
+
+                          });
+                            $(".Result_container tr.7153019").click(function () {
+
+                            $('.table2').hide();
+                            $('.table1').hide();
+                            $('.table3').hide();
+                            $('.table4').hide();
+                            $('.table5').hide();
+                            $('.table6').show();
+
+                            });
+                   
+              
+
+       $(".backbtn").click(function () {
+       $(".right_side").hide();
+       });
+    });
+  </script>
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+      </li>
+
+    </ul>
+
+    <!-- SEARCH FORM -->
+
+
+    <!-- Right navbar links -->
+  <ul class="navbar-nav ml-auto">
+    <!-- Messages Dropdown Menu -->
+    <li class="nav-item dropdown vince">
+      <img src="./dist/img/logo_white.png" />
+
+    </li>
+    <!-- Notifications Dropdown Menu -->
+
+
+  </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-1">
+    <!-- Brand Logo -->
+    <!-- <a href="index.html" class="brand-link">
+      <img src="dist/img/logo1.png" alt="Price and Discount Logo" class="brand-image img-circle">
+      <span class="brand-text ">Price and Discount</span>
+    </a> -->
+    <div class="sidebar__logo">
+      <figure>
+        <a href="./index.html">
+           <div class="vince_log"><img src="./dist/img/plantasjen.svg" /></div>
+          <div>
+            <p> Price & Discounts</p>
+
+          </div>
+        </a>
+      </figure>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+  
+
+      <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+            <li class="nav-item">
+              <a href="items_page.html" class="nav-link active_parent">
+                <i class="nav-icon far fa-file-alt"></i>
+                <p>
+                  Items
+                </p>
+              </a>
+            </li>
+            <li class="nav-item has-treeview ">
+              <a href="#" class="nav-link active">
+                <i class="nav-icon fas fa-dollar-sign"></i>
+                <p>
+                  Price
+                  <i class="right fas fa-angle-right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                      <a href="./price_list.html" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Price List</p>
+                      </a>
+                    </li>
+                <li class="nav-item">
+                  <a href="./purchase_price.html" class="nav-link ">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Purchase Price</p>
+                  </a>
+                </li>
+            
+                      <li class="nav-item">
+                        <a href="./region.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Price List Type</p>
+                        </a>
+                      </li>
+              </ul>
+            </li>
+ 
+            <!-- <li class="nav-item">
+                       <a href="price_list.html" class="nav-link">
+                         <i class="nav-icon fas fa-fas fa-list"></i>
+                         <p>
+                           Price List
+                         </p>
+                       </a>
+                     </li> -->
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-fas fa-qrcode"></i>
+                <p>
+                  Assortment
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./currency.html" class="nav-link">
+                <i class="nav-icon far fa-far fa-money-bill-alt"></i>
+                <p>
+                  Currency
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-fas fa-percent"></i>
+                <p>
+                  Margins
+                </p>
+              </a>
+            </li>
+            <!-- <li class="nav-item has-treeview ">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-fas fa-ad"></i>
+              <p>
+                Promotions
+                <i class="right fas fa-angle-right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="./index.html" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Labels</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Store Plan</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Store Classification</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+               <li class="nav-item has-treeview ">
+                 <a href="#" class="nav-link active">
+                  
+                   <i class="nav-icon fas fa-search"></i>
+                   <p>
+                     Lookup
+                     <i class="right fas fa-angle-right"></i>
+                   </p>
+                 </a>
+                 <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                    <a href="./index.html" class="nav-link active">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Suppliers</p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Item Group</p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Product Group </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Warehouse </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Stores </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Business <Area></Area> </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Currency <Area></Area> </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Shop Categroy <Area></Area> </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Shop Class <Area></Area> </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Shop Volume Class <Area></Area> </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>PO Type <Area></Area> </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>MO Type <Area></Area> </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>DO Type <Area></Area> </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i
+                    class="far fa-circle nav-icon"></i>
+                    <p>CO Type <Area></Area> </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i
+                    class="far fa-circle nav-icon"></i>
+                    <p>Promotion Type <Area></Area>
+                    </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#"
+                    class="nav-link">
+                    <i
+                    class="far fa-circle nav-icon"></i>
+                    <p>Supplier Lead Time
+                    <Area></Area>
+                    </p>
+                    </a>
+                    </li>
+                    <li
+                    class="nav-item">
+                    <a href="#"
+                    class="nav-link">
+                    <i
+                    class="far fa-circle nav-icon"></i>
+                    <p>Warehouse Lead
+                    Time
+                    <Area></Area>
+                    </p>
+                    </a>
+                    </li>
+                    <li
+                    class="nav-item">
+                    <a href="#"
+                    class="nav-link">
+                    <i
+                    class="far fa-circle nav-icon"></i>
+                    <p>Delivery                                                                                                       Lead
+                    Term
+                    <Area></Area>
+                    </p>
+                    </a>
+                    </li>
+                    <li
+                    class="nav-item">
+                    <a href="#"
+                    class="nav-link">
+                    <i
+                    class="far fa-circle nav-icon"></i>
+                    <p>
+                    Delivery Method                                                                                        Lead
+
+                    <Area></Area>
+                    </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i
+                    class="far fa-circle nav-icon"></i>
+                    <p>
+                    Customer Table
+                    <Area></Area>
+                    </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#"
+                    class="nav-link">
+                    <i
+                    class="far fa-circle nav-icon"></i>
+                    <p>
+                    Warehouse Table
+                    <Area></Area>
+                    </p>
+                    </a>
+                    </li>
+                    </ul>
+                    </li> -->
+
+
+
+          </ul>
+             <div class="sidebar__tools footer_bottom">
+               <ul class="list-links list-links--bordered">
+                 <li class="list-links__item list-links__item--with-icon"><a href="#">
+                     <div class=" userprofiles"><i class="fas fa-user-circle"></i></div><span>Admin</span>
+                     <div class="logout_view">
+                       <div style="display: inline-block; position: relative;">
+                         <div title="Logout" class="logout"><i class="fas fa-sign-out-alt"></i> </div>
+                         <div style="display: none;">
+                           <!-- react-empty: 211 -->
+                           <!-- react-empty: 212 -->
+                         </div>
+                       </div>
+                     </div>
+                   </a></li>
+               </ul>
+             </div>
+        </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+    
+        <!-- /.row -->
+        <!-- Main row -->
+       
+        <div class="row">
+          <div class="col-md-6 left_side">
+                <div class="content-header">
+                  <div class="container-fluid row">
+                    <div class="col-md-10"><i class="nav-icon far fa-file-alt fleft"></i>
+                      <h1>Items </h1>
+                    </div>
+                       <div class="col-md-2 right_import"><button title="Import M3" class="btn btn_style"><i
+                             class="nav-icon fas fa-download fleft"></button></i>
+                        
+                       </div>
+                    
+
+                  </div><!-- /.container-fluid -->
+                </div>
+  <div class="form-field  ">
+    <div class="control">
+      <input type="text" placeholder="Search" class="search_filter" />
+    </div>
+  </div>
+  <div class="container_filter_result purchase_price items_right_align items_list">
+
+    <div class="Result_container">
+
+          <table style="width:100%" class="items_search ">
+
+            <tr>
+
+            </tr>
+            <tr class="trwidth 7044009">
+              <td class="width"><b>7044009</b></td>
+              <td class="width">
+                <!-- <div><b>Item Description</b></div> -->
+                <div>Universal Liquid Fertilizer 1L - </div>
+              <div><b>Item Type :</b>107</div>
+              <div><span class="item_type_disp">Soil and Fertil</span></div>
+              </td>
+               <td class="width">
+                 <div><b>Item Status:</b>20</div>
+                    <div style="visibility: hidden"><span class="item_type_disp">Soil and Fertil</span></div>
+                 <div style="visibility: hidden">Grave Light 35H 2Pc </div>
+             
+               </td>
+
+            </tr>
+         <tr class="trwidth 7044023">
+           <td class="width"><b>7044023</b></td>
+           <td class="width">
+             <!-- <div><b>Item Description</b></div> -->
+             <div>Nutriment Stick 30 Pk Green</div>
+             <div><b>Item Type :</b>107</div>
+               <div><span class="item_type_disp">Soil and Fertil</span></div>
+           </td>
+            <td class="width">
+              <div><b>Item Status:</b>20</div>
+            
+              <div style="visibility: hidden"><b>Item Type :</b>107</div>
+            </td>
+
+         </tr>
+             <tr class="trwidth 7044030">
+               <td class="width"><b>7044030</b></td>
+               <td class="width">
+                 <!-- <div><b>Item Description</b></div> -->
+                 <div>Nutriment Stick 30 Pk Flower</div>
+            <div><b>Item Type :</b>107</div>
+            <div><span class="item_type_disp">Soil and Fertil</span></div>
+               </td>
+                <td class="width">
+                  <div><b>Item Status:</b>50</div>
+                <!-- <div><span class="item_type_disp">Soil and Fertil</span></div> -->
+                  <div style="visibility: hidden"><b>Item Type :</b>107</div>
+                </td>
+
+             </tr>
+             <tr class="trwidth 7104809">
+               <td class="width"><b>7104809</b></td>
+               <td class="width">
+                 <!-- <div><b>Item Description</b></div> -->
+                 <div>REED DIFFUSER 45 ml Tropical Cooldown</div>
+            <div><b>Item Type :</b>107</div>
+              <div><span class="item_type_disp">Decoration</span></div>
+               </td>
+                <td class="width">
+                  <div><b>Item Status:</b>20</div>
+          <!-- <div><span class="item_type_disp">Decoration</span></div> -->
+                  <div style="visibility: hidden"><b>Item Type :</b>107</div>
+                </td>
+
+             </tr>
+            <tr class="trwidth 7153019 active_bg_10">
+              <td class="width"><b>7153019</b></td>
+              <td class="width">
+                <!-- <div><b>Item Description</b></div> -->
+                <div>Liquid Fertilizer 2L - </div>
+                <div><b>Item Type :</b>107</div>
+                <div><span class="item_type_disp">Fertil</span></div>
+              </td>
+              <td class="width">
+                <div><b>Item Status:</b>10</div>
+                <div style="visibility: hidden"><span class="item_type_disp">Fertil</span></div>
+                <div style="visibility: hidden">Grave Light 35H 4Pc </div>
+            
+              </td>
+            
+            </tr>
+                 <tr class="trwidth 7131669">
+                   <td class="width"><b>7131669</b></td>
+                   <td class="width">
+                     <!-- <div><b>Item Description</b></div> -->
+                     <div>Grave Light 35H 2Pc </div>
+                  <div><b>Item Type :</b>107</div>
+                     <div><span class="item_type_disp">Remembrance</span></div>
+                   </td>
+                    <td class="width">
+                      <div ><b>Item Status:</b>20</div>
+                      <!-- <div><span class="item_type_disp">Remembrance</span></div> -->
+                      <div style="visibility: hidden"><b>Item Type :</b>107</div>
+                    </td>
+
+                 </tr>
+                   
+                 <!-- <tr class="trwidth">
+                   <td class="width"><b>Item Number</b></td>
+                   <td class="width">
+                     <div><b>Item Name</b></div>
+                     <div>Lorem Ipsum is simply dummy text of the printing printing and typesetting industry</div>
+                     <div><b>Item Type</b></div>
+                   </td>
+
+                 </tr>
+                     <tr class="trwidth">
+                       <td class="width"><b>Item Number</b></td>
+                       <td class="width">
+                         <div><b>Item Name</b></div>
+                         <div>Lorem Ipsum is simply dummy text of the printing </div>
+                         <div><b>Item Type</b></div>
+                       </td>
+
+                     </tr>
+                     <tr class="trwidth">
+                       <td class="width"><b>Item Number</b></td>
+                       <td class="width">
+                         <div><b>Item Name</b></div>
+                         <div>Lorem Ipsum is simply dummy text of the printing printing and typesetting industry</div>
+                         <div><b>Item Type</b></div>
+                       </td>
+
+                     </tr>
+                         <tr class="trwidth">
+                           <td class="width"><b>Item Number</b></td>
+                           <td class="width">
+                             <div><b>Item Name</b></div>
+                             <div>Lorem Ipsum is simply dummy text of the printing </div>
+                             <div><b>Item Type</b></div>
+                           </td>
+
+                         </tr>
+                         <tr class="trwidth">
+                           <td class="width"><b>Item Number</b></td>
+                           <td class="width">
+                             <div><b>Item Name</b></div>
+                             <div>Lorem Ipsum is simply dummy text of the printing printing and typesetting industry
+                             </div>
+                             <div><b>Item Type</b></div>
+                           </td>
+
+                         </tr>
+                             <tr class="trwidth">
+                               <td class="width"><b>Item Number</b></td>
+                               <td class="width">
+                                 <div><b>Item Name</b></div>
+                                 <div>Lorem Ipsum is simply dummy text of the printing </div>
+                                 <div><b>Item Type</b></div>
+                               </td>
+
+                             </tr>
+                             <tr class="trwidth">
+                               <td class="width"><b>Item Number</b></td>
+                               <td class="width">
+                                 <div><b>Item Name</b></div>
+                                 <div>Lorem Ipsum is simply dummy text of the printing printing and typesetting industry
+                                 </div>
+                                 <div><b>Item Type</b></div>
+                               </td>
+
+                             </tr>
+                                 <tr class="trwidth">
+              <td class="width"><b>Item Number</b></td>
+              <td class="width">
+                <div><b>Item Name</b></div>
+                <div>Lorem Ipsum is simply dummy text of the printing </div>
+                 <div><b>Item Type</b></div>
+              </td>
+
+            </tr>
+         <tr class="trwidth">
+           <td class="width"><b>Item Number</b></td>
+           <td class="width">
+             <div><b>Item Name</b></div>
+             <div>Lorem Ipsum is simply dummy text of the printing printing and typesetting industry</div>
+             <div><b>Item Type</b></div>
+           </td>
+
+         </tr>
+             <tr class="trwidth">
+               <td class="width"><b>Item Number</b></td>
+               <td class="width">
+                 <div><b>Item Name</b></div>
+                 <div>Lorem Ipsum is simply dummy text of the printing </div>
+                 <div><b>Item Type</b></div>
+               </td>
+
+             </tr>
+             <tr class="trwidth">
+               <td class="width"><b>Item Number</b></td>
+               <td class="width">
+                 <div><b>Item Name</b></div>
+                 <div>Lorem Ipsum is simply dummy text of the printing printing and typesetting industry</div>
+                 <div><b>Item Type</b></div>
+               </td>
+
+             </tr>
+                 <tr class="trwidth">
+                   <td class="width"><b>Item Number</b></td>
+                   <td class="width">
+                     <div><b>Item Name</b></div>
+                     <div>Lorem Ipsum is simply dummy text of the printing </div>
+                     <div><b>Item Type</b></div>
+                   </td>
+
+                 </tr>
+                 <tr class="trwidth">
+                   <td class="width"><b>Item Number</b></td>
+                   <td class="width">
+                     <div><b>Item Name</b></div>
+                     <div>Lorem Ipsum is simply dummy text of the printing printing and typesetting industry</div>
+                     <div><b>Item Type</b></div>
+                   </td>
+
+                 </tr>
+                     <tr class="trwidth">
+              <td class="width"><b>Item Number</b></td>
+              <td class="width">
+                <div><b>Item Name</b></div>
+                <div>Lorem Ipsum is simply dummy text of the printing </div>
+                 <div><b>Item Type</b></div>
+              </td>
+
+            </tr>
+         <tr class="trwidth">
+           <td class="width"><b>Item Number</b></td>
+           <td class="width">
+             <div><b>Item Name</b></div>
+             <div>Lorem Ipsum is simply dummy text of the printing printing and typesetting industry</div>
+             <div><b>Item Type</b></div>
+           </td>
+
+         </tr>
+
+            <tr class="trwidth">
+              <td class="width"><b>Item Number</b></td>
+              <td class="width">
+                <div><b>Item Name</b></div>
+                <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                  industry's standard dummy text ever since the 1500s</div>
+              </td>
+
+            </tr>
+            <tr class="trwidth">
+              <td class="width"><b>Item Number</b></td>
+              <td class="width">
+                <div><b>Item Name</b></div>
+                <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                  industry's standard dummy text ever since the 1500s</div>
+              </td>
+
+            </tr>
+            <tr class="trwidth">
+              <td class="width"><b>Item Number</b></td>
+              <td class="width">
+                <div><b>Item Name</b></div>
+                <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                  industry's standard dummy text ever since the 1500s</div>
+              </td>
+
+            </tr>
+            <tr class="trwidth">
+              <td class="width"><b>Item Number</b></td>
+              <td class="width">
+                <div><b>Item Name</b></div>
+                <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                  industry's standard dummy text ever since the 1500s</div>
+              </td>
+
+            </tr>
+            <tr class="trwidth">
+              <td class="width"><b>Item Number</b></td>
+              <td class="width">
+                <div><b>Item Name</b></div>
+                <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                  industry's standard dummy text ever since the 1500s</div>
+              </td>
+
+            </tr>
+            <tr class="trwidth">
+              <td class="width"><b>Item Number</b></td>
+              <td class="width">
+                <div><b>Item Name</b></div>
+                <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                  industry's standard dummy text ever since the 1500s</div>
+              </td>
+
+            </tr>
+            <tr class="trwidth">
+              <td class="width"><b>Item Number</b></td>
+              <td class="width">
+                <div><b>Item Name</b></div>
+                <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                  industry's standard dummy text ever since the 1500s</div>
+              </td>
+
+            </tr>
+
+            <tr class="trwidth">
+              <td class="width"><b>Item Number</b></td>
+              <td class="width">
+                <div><b>Item Name</b></div>
+                <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                  industry's standard dummy text ever since the 1500s</div>
+              </td>
+
+            </tr>
+            <tr class="trwidth">
+              <td class="width"><b>Item Number</b></td>
+              <td class="width">
+                <div><b>Item Name</b></div>
+                <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                  industry's standard dummy text ever since the 1500s</div>
+              </td>
+
+            </tr>
+ -->
+
+          </table>
+          
+   
+    </div>
+  </div>
+          </div>
+        
+              <div class="col-md-6 right_side">
+                       <div class="content-header">
+                         <div class="container-fluid row">
+                           <div class="col-md-10"><i class="nav-icon far fa-file-alt fleft"></i>
+                             <h1>Items Details</h1>
+                           </div>
+                           <!-- <div class="col-md-2 right_import"><button title="Import M3" class="btn btn_style"><i
+                                 class="nav-icon fas fa-download fleft"></button></i>
+
+                           </div> -->
+
+
+                         </div><!-- /.container-fluid -->
+                       </div>
+                     <div class="container">
+<div class=" right_import"><button title="Back" class="btn btn_style backbtn"><i
+      class="nav-icon fas fa-arrow-alt-circle-left fleft"></button></i>
+
+<i class=""></i>
+</div>
+                      <section id="tabs" class="project-tab">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <nav>
+                                <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                   <a class="nav-item nav-link active" id="nav-info-tab" data-toggle="tab"
+                                     href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="true"><i
+                                       class="nav-icon fas fa-info-circle fleft"></i>Info
+                                   </a>
+                                  <a class="nav-item nav-link " id="nav-home-tab" data-toggle="tab"
+                                    href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><i
+                                      class="nav-icon fas fa-users fleft"></i>Suppliers
+                                    </a>
+                                  <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
+                                    href="#nav-profile" role="tab" aria-controls="nav-profile"
+                                    aria-selected="false"><i class="fas fa-cube nav-icon fleft"></i>Packages</a>
+                               
+                                </div>
+                              </nav>
+                              <div class="tab-content" id="nav-tabContent">
+                                 <div class="tab-pane fade show active" id="nav-info" role="tabpanel"
+                                   aria-labelledby="nav-info-tab">
+                                   <!-- <table class="table search_result" cellspacing="0">
+                                     <thead>
+                                       <tr>
+                                         <th>Project Name</th>
+                                         <th>Employer</th>
+                                         <th>Awards</th>
+                                       </tr>
+                                     </thead>
+                                     <tbody>
+                                       <tr>
+                                         <td><a href="#">Work 1</a></td>
+                                         <td>Doe</td>
+                                         <td>john@example.com</td>
+                                       </tr>
+                                       <tr>
+                                         <td><a href="#">Work 2</a></td>
+                                         <td>Moe</td>
+                                         <td>mary@example.com</td>
+                                       </tr>
+                                       <tr>
+                                         <td><a href="#">Work 3</a></td>
+                                         <td>Dooley</td>
+                                         <td>july@example.com</td>
+                                       </tr>
+                                     </tbody>
+                                   </table> -->
+                                   <div class="info_tab_list">
+                                     <table class="active_list table1">
+                                              <tr>
+                                                <td>
+                                                  <b>Item Number:</b>
+                                                </td>
+                                                <td>
+                                                  7044009
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  <b>Item description</b>
+                                                </td>
+                                                <td>
+                                                  Universal Liquid Fertilizer 1L -<br />
+
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  <b>Item Status</b>
+                                                </td>
+                                                <td>
+                                                  20 <br />
+
+                                                </td>
+                                              </tr>
+
+                                              <tr>
+                                                <td>
+                                                  <b> Unit :</b>
+                                                </td>
+                                                <td>
+                                                  PCE
+                                                </td>
+                                              </tr>
+                                              <tr>
+
+
+                                                <td>
+                                                  <b> Item Type :</b>
+                                                </td>
+                                                <td>
+                                                  107
+                                                </td>
+                                              </tr>
+                                              <tr>
+
+
+                                                <td>
+                                                  <b> Item Type Description :</b>
+                                                </td>
+                                                <td>
+                                                  Soil and Fertil
+                                                </td>
+                                              </tr>
+                                              <tr>
+
+
+                                                <td>
+                                                  <b>Suppler No :</b>
+                                                </td>
+                                                <td>
+                                                  110813
+                                                </td>
+                                              </tr>
+                                              <tr>
+
+
+                                                <td>
+                                                  <b>Suppler Name :</b>
+                                                </td>
+                                                <td>
+                                                  ASB Greenworld AB
+                                                </td>
+                                              </tr>
+                                              <tr>
+
+
+                                                <td>
+                                                  <b>Suppler Item No :</b>
+                                                </td>
+                                                <td>
+                                                  4008557044009
+                                                </td>
+                                              </tr>
+                                              <tr>
+
+
+                                                <td>
+                                                  <b>EAN Code:</b>
+                                                </td>
+                                                <td>
+                                                  --
+                                                </td>
+                                              </tr>
+                                              <tr>
+
+
+                                                <td>
+                                                  <b>Cost price :</b>
+                                                </td>
+                                                <td>
+                                                  15.55/NOK
+                                                </td>
+                                              </tr>
+                                              <tr>
+
+
+                                                <td>
+                                                  <b>Purchase price :</b>
+                                                </td>
+                                                <td>
+                                                  12.8/NOK
+                                                </td>
+                                              </tr>
+                                               <tr>
+
+
+                                                 <td>
+                                                   <b>Basic
+                                                     sales
+                                                     Price:</b>
+                                                 </td>
+                                                 <td>
+                                                   16.81/NOK
+                                                 </td>
+                                               </tr>
+                                          
+                                              <tr>
+
+
+                                                <td>
+                                                  <b> Purchase
+                                                    Price
+                                                    From date:</b>
+                                                </td>
+                                                <td>
+                                                  2019/01/01
+                                                </td>
+                                              </tr>
+                                                        <tr>
+
+
+                                                          <td>
+                                                            <b> Purchase
+                                                              Price
+                                                              to date:</b>
+                                                          </td>
+                                                          <td>
+                                                         2019/02/26
+                                                          </td>
+                                                        </tr>
+                                                                 
+                                                                                      <tr>
+
+
+                                                                                        <td>
+                                                                                          <b>Sales Price
+                                                                                            From date:</b>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                          2019/11/23
+                                                                                        </td>
+                                                                                      </tr>
+                                                                                                <tr>
+
+
+                                                                                                  <td>
+                                                                                                    <b> Sales Price
+                                                                                                      To date:</b>
+                                                                                                  </td>
+                                                                                                  <td>
+                                                                                                    ---
+                                                                                                  </td>
+                                                                                                </tr>
+                                                                                                        <tr>
+
+
+                                                                                                          <td>
+                                                                                                            <b>Price
+                                                                                                              list:</b>
+                                                                                                          </td>
+                                                                                                          <td>
+                                                                                                            3F220L
+                                                                                                          </td>
+                                                                                                        </tr>
+                                                                  
+
+
+                                     
+
+                                         </tr>
+                                     </table>
+                                        <table class="active_list table2">
+                                          <tr>
+                                            <td>
+                                              <b>Item Number:</b>
+                                            </td>
+                                            <td>
+                                              7044023
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <b>Item description</b>
+                                            </td>
+                                            <td>
+                                             Nutriment Stick 30 Pk Green <br />
+
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <b>Item Status</b>
+                                            </td>
+                                            <td>
+                                              20 <br />
+
+                                            </td>
+                                          </tr>
+
+                                          <tr>
+                                            <td>
+                                              <b> Unit :</b>
+                                            </td>
+                                            <td>
+                                              PCE
+                                            </td>
+                                          </tr>
+                                          <tr>
+
+
+                                            <td>
+                                              <b> Item Type :</b>
+                                            </td>
+                                            <td>
+                                              107
+                                            </td>
+                                          </tr>
+                                          <tr>
+
+
+                                            <td>
+                                              <b> Item Type Description :</b>
+                                            </td>
+                                            <td>
+                                              Soil and Fertil
+                                            </td>
+                                          </tr>
+                                          <tr>
+
+
+                                            <td>
+                                              <b>Suppler No :</b>
+                                            </td>
+                                            <td>
+                                              110813
+                                            </td>
+                                          </tr>
+                                          <tr>
+
+
+                                            <td>
+                                              <b>Suppler Name :</b>
+                                            </td>
+                                            <td>
+                                              ASB Greenworld AB
+                                            </td>
+                                          </tr>
+                                          <tr>
+
+
+                                            <td>
+                                              <b>Suppler Item No :</b>
+                                            </td>
+                                            <td>
+                                              4008557044009
+                                            </td>
+                                          </tr>
+                                          <tr>
+
+
+                                            <td>
+                                              <b>EAN Code:</b>
+                                            </td>
+                                            <td>
+                                              --
+                                            </td>
+                                          </tr>
+                                          <tr>
+
+
+                                            <td>
+                                              <b>Cost price :</b>
+                                            </td>
+                                            <td>
+                                             7.9/NOK
+                                            </td>
+                                          </tr>
+                                          <tr>
+
+
+                                            <td>
+                                              <b>Purchase price :</b>
+                                            </td>
+                                            <td>
+                                            6.5/NOK
+                                            </td>
+                                          </tr>
+                                      
+                                          <tr>
+                                             <tr>
+
+
+                                               <td>
+                                                 <b>Basic
+                                                   sales
+                                                   Price:</b>
+                                               </td>
+                                               <td>
+                                                 8.52/NOK
+                                               </td>
+                                             </tr>
+
+
+                                            <td>
+                                              <b> Purchase
+                                                Price
+                                                From date:</b>
+                                            </td>
+                                            <td>
+                                              2019/01/01
+                                            </td>
+                                          </tr>
+                                          <tr>
+
+
+                                            <td>
+                                              <b> Purchase
+                                                Price
+                                                to date:</b>
+                                            </td>
+                                            <td>
+                                                2020/03/23
+                                            </td>
+                                          </tr>
+                                         
+                                         
+                                          <tr>
+
+
+                                            <td>
+                                              <b>Sales Price
+                                                From date:</b>
+                                            </td>
+                                            <td>
+                                              2019/04/01
+                                            </td>
+                                          </tr>
+                                          <tr>
+
+
+                                            <td>
+                                              <b> Sales Price
+                                                To date:</b>
+                                            </td>
+                                            <td>
+                                              ---
+                                            </td>
+                                          </tr>
+                                          <tr>
+
+
+                                            <td>
+                                              <b>Price
+                                                list:</b>
+                                            </td>
+                                            <td>
+                                              3F220L
+                                            </td>
+                                          </tr>
+
+
+
+
+
+                                          </tr>
+                                        </table>
+                                                <table class="active_list table3">
+                                                  <tr>
+                                                    <td>
+                                                      <b>Item Number:</b>
+                                                    </td>
+                                                    <td>
+                                                      7044030
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>
+                                                      <b>Item description</b>
+                                                    </td>
+                                                    <td>
+                                                     Nutriment Stick 30 Pk Flower <br />
+
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>
+                                                      <b>Item Status</b>
+                                                    </td>
+                                                    <td>
+                                                      50 <br />
+
+                                                    </td>
+                                                  </tr>
+
+                                                  <tr>
+                                                    <td>
+                                                      <b> Unit :</b>
+                                                    </td>
+                                                    <td>
+                                                      PCE
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+
+
+                                                    <td>
+                                                      <b> Item Type :</b>
+                                                    </td>
+                                                    <td>
+                                                      107
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+
+
+                                                    <td>
+                                                      <b> Item Type Description :</b>
+                                                    </td>
+                                                    <td>
+                                                      Soil and Fertil
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+
+
+                                                    <td>
+                                                      <b>Suppler No :</b>
+                                                    </td>
+                                                    <td>
+                                                      110813
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+
+
+                                                    <td>
+                                                      <b>Suppler Name :</b>
+                                                    </td>
+                                                    <td>
+                                                      ASB Greenworld AB
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+
+
+                                                    <td>
+                                                      <b>Suppler Item No :</b>
+                                                    </td>
+                                                    <td>
+                                                      4008557044030
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+
+
+                                                    <td>
+                                                      <b>EAN Code:</b>
+                                                    </td>
+                                                    <td>
+                                                      --
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+
+
+                                                    <td>
+                                                      <b>Cost price :</b>
+                                                    </td>
+                                                    <td>
+                                                      7.9/NOK
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+
+
+                                                    <td>
+                                                      <b>Purchase price :</b>
+                                                    </td>
+                                                    <td>
+                                                      6.5/NOK
+                                                    </td>
+                                                  </tr>
+                                                 <tr>
+
+
+                                                   <td>
+                                                     <b>Basic
+                                                       sales
+                                                       Price:</b>
+                                                   </td>
+                                                   <td>
+                                                     9.52/NOK
+                                                   </td>
+                                                 </tr>
+                                                  <tr>
+
+
+                                                    <td>
+                                                      <b> Purchase
+                                                        Price
+                                                        From date:</b>
+                                                    </td>
+                                                    <td>
+                                                      2020/08/15
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+
+
+                                                    <td>
+                                                      <b> Purchase
+                                                        Price
+                                                        to date:</b>
+                                                    </td>
+                                                    <td>
+                                                       2020/11/19
+                                                    </td>
+                                                  </tr>
+                                                  
+                                                 
+                                                  <tr>
+
+
+                                                    <td>
+                                                      <b>Sales Price
+                                                        From date:</b>
+                                                    </td>
+                                                    <td>
+                                                      2019/01/01
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+
+
+                                                    <td>
+                                                      <b> Sales Price
+                                                        To date:</b>
+                                                    </td>
+                                                    <td>
+                                                      ---
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+
+
+                                                    <td>
+                                                      <b>Price
+                                                        list:</b>
+                                                    </td>
+                                                    <td>
+                                                      3F220L
+                                                    </td>
+                                                  </tr>
+
+
+
+
+
+                                                  </tr>
+                                                </table>
+                                                      <table class="active_list table4">
+                                                        <tr>
+                                                          <td>
+                                                            <b>Item Number:</b>
+                                                          </td>
+                                                          <td>
+                                                            7104809
+                                                          </td>
+                                                        </tr>
+                                                        <tr>
+                                                          <td>
+                                                            <b>Item description</b>
+                                                          </td>
+                                                          <td>
+                                                           REED DIFFUSER 45 ml Tropical Cooldown <br />
+
+                                                          </td>
+                                                        </tr>
+                                                        <tr>
+                                                          <td>
+                                                            <b>Item Status</b>
+                                                          </td>
+                                                          <td>
+                                                            20 <br />
+
+                                                          </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                          <td>
+                                                            <b> Unit :</b>
+                                                          </td>
+                                                          <td>
+                                                            PCE
+                                                          </td>
+                                                        </tr>
+                                                        <tr>
+
+
+                                                          <td>
+                                                            <b> Item Type :</b>
+                                                          </td>
+                                                          <td>
+                                                            107
+                                                          </td>
+                                                        </tr>
+                                                        <tr>
+
+
+                                                          <td>
+                                                            <b> Item Type Description :</b>
+                                                          </td>
+                                                          <td>
+                                                            Decoration
+                                                          </td>
+                                                        </tr>
+                                                        <tr>
+
+
+                                                          <td>
+                                                            <b>Suppler No :</b>
+                                                          </td>
+                                                          <td>
+                                                            110813
+                                                          </td>
+                                                        </tr>
+                                                        <tr>
+
+
+                                                          <td>
+                                                            <b>Suppler Name :</b>
+                                                          </td>
+                                                          <td>
+                                                           Bolsius Nordic AB
+                                                          </td>
+                                                        </tr>
+                                                        <tr>
+
+
+                                                          <td>
+                                                            <b>Suppler Item No :</b>
+                                                          </td>
+                                                          <td>
+                                                            103626800412
+                                                          </td>
+                                                        </tr>
+                                                        <tr>
+
+
+                                                          <td>
+                                                            <b>EAN Code:</b>
+                                                          </td>
+                                                          <td>
+                                                            8717847104809
+                                                          </td>
+                                                        </tr>
+                                                        <tr>
+
+
+                                                          <td>
+                                                            <b>Cost price :</b>
+                                                          </td>
+                                                          <td>
+                                                      6.52/SEK
+                                                          </td>
+                                                        </tr>
+                                                        <tr>
+
+
+                                                          <td>
+                                                            <b>Purchase price :</b>
+                                                          </td>
+                                                          <td>
+                                                           5.0/NOK
+                                                          </td>
+                                                        </tr>
+                                                   <tr>
+
+
+                                                     <td>
+                                                       <b>Basic
+                                                         sales
+                                                         Price:</b>
+                                                     </td>
+                                                     <td>
+                                                       7.52/NOK
+                                                     </td>
+                                                   </tr>
+                                                        <tr>
+
+
+                                                          <td>
+                                                            <b> Purchase
+                                                              Price
+                                                              From date:</b>
+                                                          </td>
+                                                          <td>
+                                                            2019/01/01
+                                                          </td>
+                                                        </tr>
+                                                        <tr>
+
+
+                                                          <td>
+                                                            <b> Purchase
+                                                              Price
+                                                              to date:</b>
+                                                          </td>
+                                                          <td>
+                                                             2019/11/22
+                                                          </td>
+                                                        </tr>
+                                                       
+                                                       
+                                                        <tr>
+
+
+                                                          <td>
+                                                            <b>Sales Price
+                                                              From date:</b>
+                                                          </td>
+                                                          <td>
+                                                            2019/01/01
+                                                          </td>
+                                                        </tr>
+                                                        <tr>
+
+
+                                                          <td>
+                                                            <b> Sales Price
+                                                              To date:</b>
+                                                          </td>
+                                                          <td>
+                                                            ---
+                                                          </td>
+                                                        </tr>
+                                                        <tr>
+
+
+                                                          <td>
+                                                            <b>Price
+                                                              list:</b>
+                                                          </td>
+                                                          <td>
+                                                            3F220L
+                                                          </td>
+                                                        </tr>
+
+
+
+
+
+                                                        </tr>
+                                                      </table>
+                                                           <table class="active_list table5">
+                                                             <tr>
+                                                               <td>
+                                                                 <b>Item Number:</b>
+                                                               </td>
+                                                               <td>
+                                                                 7131669
+                                                               </td>
+                                                             </tr>
+                                                             <tr>
+                                                               <td>
+                                                                 <b>Item description</b>
+                                                               </td>
+                                                               <td>
+                                                               Grave Light 35H 2Pc<br />
+
+                                                               </td>
+                                                             </tr>
+                                                             <tr>
+                                                               <td>
+                                                                 <b>Item Status</b>
+                                                               </td>
+                                                               <td>
+                                                                 20 <br />
+
+                                                               </td>
+                                                             </tr>
+
+                                                             <tr>
+                                                               <td>
+                                                                 <b> Unit :</b>
+                                                               </td>
+                                                               <td>
+                                                                 PCE
+                                                               </td>
+                                                             </tr>
+                                                             <tr>
+
+
+                                                               <td>
+                                                                 <b> Item Type :</b>
+                                                               </td>
+                                                               <td>
+                                                                 107
+                                                               </td>
+                                                             </tr>
+                                                             <tr>
+
+
+                                                               <td>
+                                                                 <b> Item Type Description :</b>
+                                                               </td>
+                                                               <td>
+                                                             Remembrance
+                                                               </td>
+                                                             </tr>
+                                                             <tr>
+
+
+                                                               <td>
+                                                                 <b>Suppler No :</b>
+                                                               </td>
+                                                               <td>
+                                                                 110021
+                                                               </td>
+                                                             </tr>
+                                                             <tr>
+
+
+                                                               <td>
+                                                                 <b>Suppler Name :</b>
+                                                               </td>
+                                                               <td>
+                                                                 Bolsius Nordic AB
+                                                               </td>
+                                                             </tr>
+                                                             <tr>
+
+
+                                                               <td>
+                                                                 <b>Suppler Item No :</b>
+                                                               </td>
+                                                               <td>
+                                                                102420199800
+                                                               </td>
+                                                             </tr>
+                                                             <tr>
+
+
+                                                               <td>
+                                                                 <b>EAN Code:</b>
+                                                               </td>
+                                                               <td>
+                                                                 8717847131669
+                                                               </td>
+                                                             </tr>
+                                                             <tr>
+
+
+                                                               <td>
+                                                                 <b>Cost price :</b>
+                                                               </td>
+                                                               <td>
+                                                              4.43/SEK
+                                                               </td>
+                                                             </tr>
+                                                             <tr>
+
+
+                                                               <td>
+                                                                 <b>Purchase price :</b>
+                                                               </td>
+                                                               <td>
+                                                            3.5/ SEK
+                                                               </td>
+                                                             </tr>
+                                                        <tr>
+
+
+                                                          <td>
+                                                            <b>Basic
+                                                              sales
+                                                              Price:</b>
+                                                          </td>
+                                                          <td>
+                                                            7.52/SEK
+                                                          </td>
+                                                        </tr>
+                                                             <tr>
+
+
+                                                               <td>
+                                                                 <b> Purchase
+                                                                   Price
+                                                                   From date:</b>
+                                                               </td>
+                                                               <td>
+                                                                 2019/01/01
+                                                               </td>
+                                                             </tr>
+                                                             <tr>
+
+
+                                                               <td>
+                                                                 <b> Purchase
+                                                                   Price
+                                                                   to date:</b>
+                                                               </td>
+                                                               <td>
+                                                                 2020/01/01
+                                                               </td>
+                                                             </tr>
+                                                            
+                                                             
+                                                             <tr>
+
+
+                                                               <td>
+                                                                 <b>Sales Price
+                                                                   From date:</b>
+                                                               </td>
+                                                               <td>
+                                                                 2019/01/01
+                                                               </td>
+                                                             </tr>
+                                                             <tr>
+
+
+                                                               <td>
+                                                                 <b> Sales Price
+                                                                   To date:</b>
+                                                               </td>
+                                                               <td>
+                                                                 ---
+                                                               </td>
+                                                             </tr>
+                                                             <tr>
+
+
+                                                               <td>
+                                                                 <b>Price
+                                                                   list:</b>
+                                                               </td>
+                                                               <td>
+                                                                 3F220L
+                                                               </td>
+                                                             </tr>
+
+
+
+
+
+                                                             </tr>
+                                                           </table>
+                                                             <table class="active_list table6">
+                                                               <tr>
+                                                                 <td>
+                                                                   <b>Item Number:</b>
+                                                                 </td>
+                                                                 <td>
+                                                                   7153019
+                                                                 </td>
+                                                               </tr>
+                                                               <tr>
+                                                                 <td>
+                                                                   <b>Item description</b>
+                                                                 </td>
+                                                                 <td>
+                                                                   Liquid Fertilizer 2L - <br />
+
+                                                                 </td>
+                                                               </tr>
+                                                               <tr>
+                                                                 <td>
+                                                                   <b>Item Status</b>
+                                                                 </td>
+                                                                 <td>
+                                                                   10 <br />
+
+                                                                 </td>
+                                                               </tr>
+
+                                                               <tr>
+                                                                 <td>
+                                                                   <b> Unit :</b>
+                                                                 </td>
+                                                                 <td>
+                                                                   PCE
+                                                                 </td>
+                                                               </tr>
+                                                               <tr>
+
+
+                                                                 <td>
+                                                                   <b> Item Type :</b>
+                                                                 </td>
+                                                                 <td>
+                                                                   107
+                                                                 </td>
+                                                               </tr>
+                                                               <tr>
+
+
+                                                                 <td>
+                                                                   <b> Item Type Description :</b>
+                                                                 </td>
+                                                                 <td>
+                                                                   Remembrance
+                                                                 </td>
+                                                               </tr>
+                                                               <tr>
+
+
+                                                                 <td>
+                                                                   <b>Suppler No :</b>
+                                                                 </td>
+                                                                 <td>
+                                                                   114521
+                                                                 </td>
+                                                               </tr>
+                                                               <tr>
+
+
+                                                                 <td>
+                                                                   <b>Suppler Name :</b>
+                                                                 </td>
+                                                                 <td>
+                                                                   Bolsius Nordic AB
+                                                                 </td>
+                                                               </tr>
+                                                               <tr>
+
+
+                                                                 <td>
+                                                                   <b>Suppler Item No :</b>
+                                                                 </td>
+                                                                 <td>
+                                                                   102420199800
+                                                                 </td>
+                                                               </tr>
+                                                               <tr>
+
+
+                                                                 <td>
+                                                                   <b>EAN Code:</b>
+                                                                 </td>
+                                                                 <td>
+                                                                   8717847131669
+                                                                 </td>
+                                                               </tr>
+                                                               <!-- <tr>
+
+
+                                                                 <td>
+                                                                   <b>Cost price :</b>
+                                                                 </td>
+                                                                 <td>
+                                                                   4.43/SEK
+                                                                 </td>
+                                                               </tr> -->
+                                                               <tr>
+
+
+                                                                 <td>
+                                                                   <b>Purchase price :</b>
+                                                                 </td>
+                                                                 <td>
+                                                                   3.5/ SEK
+                                                                 </td>
+                                                               </tr>
+                                                               <!-- <tr>
+
+
+                                                                 <td>
+                                                                   <b>Basic
+                                                                     sales
+                                                                     Price:</b>
+                                                                 </td>
+                                                                 <td>
+                                                                   7.52/SEK
+                                                                 </td>
+                                                               </tr> -->
+                                                               <tr>
+
+
+                                                                 <td>
+                                                                   <b> Purchase
+                                                                     Price
+                                                                     From date:</b>
+                                                                 </td>
+                                                                 <td>
+                                                                   2019/01/01
+                                                                 </td>
+                                                               </tr>
+                                                               <tr>
+
+
+                                                                 <td>
+                                                                   <b> Purchase
+                                                                     Price
+                                                                     to date:</b>
+                                                                 </td>
+                                                                 <td>
+                                                                   2020/02/22
+                                                                 </td>
+                                                               </tr>
+
+
+                                                               <!-- <tr>
+
+
+                                                                 <td>
+                                                                   <b>Sales Price
+                                                                     From date:</b>
+                                                                 </td>
+                                                                 <td>
+                                                                   2019/01/01
+                                                                 </td>
+                                                               </tr> -->
+                                                               <!-- <tr>
+
+
+                                                                 <td>
+                                                                   <b> Sales Price
+                                                                     To date:</b>
+                                                                 </td>
+                                                                 <td>
+                                                                   ---
+                                                                 </td>
+                                                               </tr> -->
+                                                               <!-- <tr>
+
+
+                                                                 <td>
+                                                                   <b>Price
+                                                                     list:</b>
+                                                                 </td>
+                                                                 <td>
+                                                                   3F220L
+                                                                 </td>
+                                                               </tr>
+ -->
+
+
+
+
+                                                               </tr>
+                                                             </table>
+                                     
+                                   </div>
+                                 </div>
+                                <div class="tab-pane fade " id="nav-home" role="tabpanel"
+                                  aria-labelledby="nav-home-tab">
+                                  <!-- <table class="table search_result" cellspacing="0" >
+                                    <thead>
+                                      <tr>
+                                            <th>Supplier No</th>
+                                        <th>Supplier Name</th>
+                                          <th>Currency</th>
+                                       
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                                <td>110813</td>
+                                        <td><a href="#">ASB Greenworld AB</a></td>
+                                
+                                        <td>SEK</td>
+                                       
+                                      </tr>
+                                          <tr>
+                                            <td>110021</td>
+                                            <td><a href="#">Bolsius Nordic AB</a></td>
+
+                                            <td>SEK</td>
+                          
+                                          </tr>
+                                              <tr>
+                                                <td>110025</td>
+                                                <td><a href="#">Cofa Plastics AB</a></td>
+
+                                                <td>SEK</td>
+                             
+                                              </tr>
+                                                  <tr>
+                                                    <td>110038</td>
+                                                    <td><a href="#">Fiskars Norge Redskap AS</a></td>
+
+                                                    <td>NOK</td>
+                                      
+                                                  </tr>
+                                                          <tr>
+                                                            <td>110042</td>
+                                                            <td><a href="#">Floragard Vertried Gmbh</a></td>
+
+                                                            <td>EUR</td>
+
+                                                          </tr>
+                                                  
+                                     
+                                    </tbody>
+                                  </table> -->
+                                
+                                <table class="table search_result table1" cellspacing="0">
+                                  <thead>
+                                    <tr>
+                                      <th>Supplier Name</th>
+                                      <th>Supplier No</th>
+                                        <th>Currency</th>
+                                      <th>External Supplier No</th>
+                                      <th>Is Main Supplier </th>
+                                      <th>Supplier Item Number</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td><a href="#">ASB Greenworld AB</a></td>
+                                      <td>110813</td>
+                                           <td>SEK</td>
+                                      <td>3166322</td>
+                                      <td>yes</td>
+                                      <td>8811739</td>
+                                    </tr>
+                                    <tr>
+                                      <td><a href="#">Bolsius Nordic AB</a></td>
+                                      <td>110021</td>
+                                      <td>SEK</td>
+                                      <td>4256322</td>
+                                      <td>No</td>
+                                      <td>8211739</td>
+                                    </tr>
+                                         <tr>
+                                           <td><a href="#">Cofa Plastics AB</a></td>
+                                           <td>110025</td>
+                                           <td>SEK</td>
+                                           <td>2866322</td>
+                                           <td>No</td>
+                                           <td>4422739</td>
+                                         </tr>
+                                              <tr>
+                                                <td><a href="#">Fiskars Norge Redskap AS</a></td>
+                                                <td>110038</td>
+                                                <td>NOK</td>
+                                                <td>6892255</td>
+                                                <td>No</td>
+                                                <td>5511749</td>
+                                              </tr>
+                                                   <tr>
+                                                     <td><a href="#">Floragard Vertried Gmbh</a></td>
+                                                     <td>110042</td>
+                                                     <td>EUR</td>
+                                                     <td>4125553</td>
+                                                     <td>No</td>
+                                                     <td>3311589</td>
+                                                   </tr>
+                                    
+                                  </tbody>
+                                </table>
+                                 <table class="table search_result table2" cellspacing="0">
+                                   <thead>
+                                     <tr>
+                                       <th>Supplier Name</th>
+                                       <th>Supplier No</th>
+                                       <th>Currency</th>
+                                       <th>External Supplier No</th>
+                                       <th>Is Main Supplier </th>
+                                       <th>Supplier Item Number</th>
+                                     </tr>
+                                   </thead>
+                                   <tbody>
+                                     <tr>
+                                       <td><a href="#"> Bolsius Nordic AB</a></td>
+                                       <td>110813</td>
+                                       <td>SEK</td>
+                                       <td>2566322</td>
+                                       <td>yes</td>
+                                       <td>4581739</td>
+                                     </tr>
+                                     <tr>
+                                       <td><a href="#">ASB Greenworld AB</a></td>
+                                       <td>220021</td>
+                                       <td>SEK</td>
+                                       <td>4256322</td>
+                                       <td>No</td>
+                                       <td>8211739</td>
+                                     </tr>
+                                     <tr>
+                                       <td><a href="#"> Fiskars Norge Redskap AS</a></td>
+                                       <td>110025</td>
+                                       <td>SEK</td>
+                                       <td>6866322</td>
+                                       <td>No</td>
+                                       <td>4422739</td>
+                                     </tr>
+                                     <tr>
+                                       <td><a href="#"> Floragard Vertried Gmbh</a></td>
+                                       <td>110038</td>
+                                       <td>NOK</td>
+                                       <td>7792255</td>
+                                       <td>No</td>
+                                       <td>3311749</td>
+                                     </tr>
+                                     <tr>
+                                       <td><a href="#">Cofa Plastics AB</a></td>
+                                       <td>110042</td>
+                                       <td>EUR</td>
+                                       <td>4125553</td>
+                                       <td>No</td>
+                                       <td>3311589</td>
+                                     </tr>
+
+                                   </tbody>
+                                 </table>
+                                    <table class="table search_result table3" cellspacing="0">
+                                      <thead>
+                                        <tr>
+                                          <th>Supplier Name</th>
+                                          <th>Supplier No</th>
+                                          <th>Currency</th>
+                                          <th>External Supplier No</th>
+                                          <th>Is Main Supplier </th>
+                                          <th>Supplier Item Number</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td><a href="#">  ASB Greenworld AB</a></td>
+                                          <td>110813</td>
+                                          <td>SEK</td>
+                                          <td>3366322</td>
+                                          <td>NO</td>
+                                          <td>4581739</td>
+                                        </tr>
+                                        <tr>
+                                          <td><a href="#">Bolsius Nordic AB</a></td>
+                                          <td>220021</td>
+                                          <td>SEK</td>
+                                          <td>4277322</td>
+                                          <td>NO</td>
+                                          <td>8211739</td>
+                                        </tr>
+                                        <tr>
+                                          <td><a href="#"> Floragard Vertried Gmbh</a></td>
+                                          <td>110025</td>
+                                          <td>SEK</td>
+                                          <td>4488322</td>
+                                          <td>NO</td>
+                                          <td>4422739</td>
+                                        </tr>
+                                        <tr>
+                                          <td><a href="#"> Fiskars Norge Redskap AS </a></td>
+                                          <td>110038</td>
+                                          <td>NOK</td>
+                                          <td>779266</td>
+                                          <td>NO</td>
+                                          <td>8511749</td>
+                                        </tr>
+                                        <tr>
+                                          <td><a href="#">Cofa Plastics AB</a></td>
+                                          <td>110042</td>
+                                          <td>EUR</td>
+                                          <td>4125553</td>
+                                          <td>YES</td>
+                                          <td>3311589</td>
+                                        </tr>
+
+                                      </tbody>
+                                    </table>
+                                       <table class="table search_result table4" cellspacing="0">
+                                         <thead>
+                                           <tr>
+                                             <th>Supplier Name</th>
+                                             <th>Supplier No</th>
+                                             <th>Currency</th>
+                                             <th>External Supplier No</th>
+                                             <th>Is Main Supplier </th>
+                                             <th>Supplier Item Number</th>
+                                           </tr>
+                                         </thead>
+                                         <tbody>
+                                           <tr>
+                                             <td><a href="#"> ASB Greenworld AB</a></td>
+                                             <td>110813</td>
+                                             <td>SEK</td>
+                                             <td>3366322</td>
+                                             <td>NO</td>
+                                             <td>4581739</td>
+                                           </tr>
+                                           <tr>
+                                             <td><a href="#"> Fiskars Norge Redskap AS</a></td>
+                                             <td>220021</td>
+                                             <td>SEK</td>
+                                             <td>4277322</td>
+                                             <td>NO</td>
+                                             <td>8211739</td>
+                                           </tr>
+                                           <tr>
+                                             <td><a href="#"> Floragard Vertried Gmbh</a></td>
+                                             <td>110024</td>
+                                             <td>SEK</td>
+                                             <td>4447322</td>
+                                             <td>NO</td>
+                                             <td>4422739</td>
+                                           </tr>
+                                           <tr>
+                                             <td><a href="#">  Cofa Plastics AB</a></td>
+                                             <td>110038</td>
+                                             <td>NOK</td>
+                                             <td>979266</td>
+                                             <td>YES</td>
+                                             <td>8522799</td>
+                                           </tr>
+                                           <tr>
+                                             <td><a href="#">Bolsius Nordic AB</a></td>
+                                             <td>110042</td>
+                                             <td>EUR</td>
+                                             <td>2135553</td>
+                                             <td>NO</td>
+                                             <td>4711589</td>
+                                           </tr>
+
+                                         </tbody>
+                                       </table>
+                                            <table class="table search_result table5" cellspacing="0">
+                                              <thead>
+                                                <tr>
+                                                  <th>Supplier Name</th>
+                                                  <th>Supplier No</th>
+                                                  <th>Currency</th>
+                                                  <th>External Supplier No</th>
+                                                  <th>Is Main Supplier </th>
+                                                  <th>Supplier Item Number</th>
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                <tr>
+                                                  <td><a href="#"> ASB Greenworld AB</a></td>
+                                                  <td>220813</td>
+                                                  <td>SEK</td>
+                                                  <td>255322</td>
+                                                  <td>NO</td>
+                                                  <td>2381739</td>
+                                                </tr>
+                                                <tr>
+                                                  <td><a href="#"> Floragard Vertried Gmbh</a></td>
+                                                  <td>850021</td>
+                                                  <td>SEK</td>
+                                                  <td>6477322</td>
+                                                  <td>NO</td>
+                                                  <td>4211739</td>
+                                                </tr>
+                                                <tr>
+                                                  <td><a href="#">Bolsius Nordic AB </a></td>
+                                                  <td>110025</td>
+                                                  <td>SEK</td>
+                                                  <td>4488322</td>
+                                                  <td>NO</td>
+                                                  <td>4422739</td>
+                                                </tr>
+                                                <tr>
+                                                  <td><a href="#"> Fiskars Norge Redskap AS </a></td>
+                                                  <td>110038</td>
+                                                  <td>NOK</td>
+                                                  <td>779266</td>
+                                                  <td>YES</td>
+                                                  <td>8511749</td>
+                                                </tr>
+                                                <tr>
+                                                  <td><a href="#">Cofa Plastics AB</a></td>
+                                                  <td>110042</td>
+                                                  <td>EUR</td>
+                                                  <td>3525553</td>
+                                                  <td>NO</td>
+                                                  <td>6988589</td>
+                                                </tr>
+
+                                              </tbody>
+                                            </table>
+                                                <table class="table search_result table6" cellspacing="0">
+                                                  <thead>
+                                                    <tr>
+                                                      <th>Supplier Name</th>
+                                                      <th>Supplier No</th>
+                                                      <th>Currency</th>
+                                                      <th>External Supplier No</th>
+                                                      <th>Is Main Supplier </th>
+                                                      <th>Supplier Item Number</th>
+                                                    </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                    <tr>
+                                                      <td><a href="#">ASB Greenworld AB</a></td>
+                                                      <td>110813</td>
+                                                      <td>SEK</td>
+                                                      <td>3166322</td>
+                                                      <td>yes</td>
+                                                      <td>8811739</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td><a href="#">Bolsius Nordic AB</a></td>
+                                                      <td>110021</td>
+                                                      <td>SEK</td>
+                                                      <td>4256322</td>
+                                                      <td>No</td>
+                                                      <td>8211739</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td><a href="#">Cofa Plastics AB</a></td>
+                                                      <td>1102585</td>
+                                                      <td>SEK</td>
+                                                      <td>2866322</td>
+                                                      <td>No</td>
+                                                      <td>4422739</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td><a href="#">Fiskars Norge Redskap AS</a></td>
+                                                      <td>110038</td>
+                                                      <td>NOK</td>
+                                                      <td>6892255</td>
+                                                      <td>No</td>
+                                                      <td>5511749</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td><a href="#">Floragard Vertried Gmbh</a></td>
+                                                      <td>110042</td>
+                                                      <td>EUR</td>
+                                                      <td>25585452</td>
+                                                      <td>No</td>
+                                                      <td>3311589</td>
+                                                    </tr>
+                                                
+                                                  </tbody>
+                                                </table>
+                                </div>
+                                <div class="tab-pane fade" id="nav-profile" role="tabpanel"
+                                  aria-labelledby="nav-profile-tab">
+                                <table class="table search_result table1" cellspacing="0">
+                                  <thead>
+                                    <tr>
+                                      <!-- <th>PackageClass</th> -->
+
+                                      <th>Package Unit</th>
+                                      <th>PackageBasics U/M</th>
+                                      <th>ConversionFactor</th>
+                                      <!-- <th>ConversionFactor M3</th> -->
+                                      <th>Calculated Quantity</th>                                     
+                                      <th>EAN</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <!-- <td>F</td> -->
+                                      <td>PCE</td>
+                                      <td>PCE</td>
+                                      <td>1</td>
+                                      <td>1</td>
+                                         <td>4522658</td>
+                                     
+
+
+                                    </tr>
+                                    <tr>
+                                      <!-- <td>F</td> -->
+                                      <td>KRT</td>
+                                      <td>PCE</td>
+                                      <td>12</td>
+                                      <td>12</td>
+                                      <td>3421234567120</td>
+                                    
+                                    
+                                    
+                                    </tr>
+                                   
+                                  </tbody>
+                                </table>
+                                    <table class="table search_result table2" cellspacing="0">
+                                      <thead>
+                                        <tr>
+                                          <!-- <th>PackageClass</th> -->
+                                    
+                                          <th>Package Unit</th>
+                                          <th>PackageBasics U/M</th>
+                                          <th>ConversionFactor</th>
+                                          <!-- <th>ConversionFactor M3</th> -->
+                                          <th>Calculated Quantity</th>
+                                          <th>EAN</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <!-- <td>F</td> -->
+                                          <td>PCE</td>
+                                          <td>PCE</td>
+                                          <td>15</td>
+                                          <td>15</td>
+                                          <td>22552658</td>
+                                    
+                                    
+                                    
+                                        </tr>
+                                        <tr>
+                                          <!-- <td>F</td> -->
+                                          <td>KRT</td>
+                                          <td>PCE</td>
+                                          <td>10</td>
+                                          <td>10</td>
+                                          <td>621234567120</td>
+                                    
+                                    
+                                    
+                                        </tr>
+                                    
+                                      </tbody>
+                                    </table>
+                                          <table class="table search_result table3" cellspacing="0">
+                                            <thead>
+                                              <tr>
+                                                <!-- <th>PackageClass</th> -->
+                                          
+                                                <th>Package Unit</th>
+                                                <th>PackageBasics U/M</th>
+                                                <th>ConversionFactor</th>
+                                                <!-- <th>ConversionFactor M3</th> -->
+                                                <th>Calculated Quantity</th>
+                                                <th>EAN</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <!-- <td>F</td> -->
+                                                <td>PCE</td>
+                                                <td>PCE</td>
+                                                <td>4</td>
+                                                <td>4</td>
+                                                <td>22552658</td>
+                                          
+                                          
+                                          
+                                              </tr>
+                                              <tr>
+                                                <!-- <td>F</td> -->
+                                                <td>KRT</td>
+                                                <td>PCE</td>
+                                                <td>14</td>
+                                                <td>14</td>
+                                                <td>778858955</td>
+                                          
+                                          
+                                          
+                                              </tr>
+                                          
+                                            </tbody>
+                                          </table>
+                                                <table class="table search_result table4" cellspacing="0">
+                                                  <thead>
+                                                    <tr>
+                                                      <!-- <th>PackageClass</th> -->
+                                                
+                                                      <th>Package Unit</th>
+                                                      <th>PackageBasics U/M</th>
+                                                      <th>ConversionFactor</th>
+                                                      <!-- <th>ConversionFactor M3</th> -->
+                                                      <th>Calculated Quantity</th>
+                                                      <th>EAN</th>
+                                                    </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                    <tr>
+                                                      <!-- <td>F</td> -->
+                                                      <td>PCE</td>
+                                                      <td>PCE</td>
+                                                      <td>1</td>
+                                                      <td>1</td>
+                                                      <td>66552658</td>
+                                                
+                                                
+                                                
+                                                    </tr>
+                                                    <tr>
+                                                      <!-- <td>F</td> -->
+                                                      <td>KRT</td>
+                                                      <td>PCE</td>
+                                                      <td>11</td>
+                                                      <td>11</td>
+                                                      <td>9985854785</td>
+                                                
+                                                
+                                                
+                                                    </tr>
+                                                
+                                                  </tbody>
+                                                </table>
+                                                      <table class="table search_result table5" cellspacing="0">
+                                                        <thead>
+                                                          <tr>
+                                                            <!-- <th>PackageClass</th> -->
+                                                      
+                                                            <th>Package Unit</th>
+                                                            <th>PackageBasics U/M</th>
+                                                            <th>ConversionFactor</th>
+                                                            <!-- <th>ConversionFactor M3</th> -->
+                                                            <th>Calculated Quantity</th>
+                                                            <th>EAN</th>
+                                                          </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                          <tr>
+                                                            <!-- <td>F</td> -->
+                                                            <td>PCE</td>
+                                                            <td>PCE</td>
+                                                            <td>2</td>
+                                                            <td>2</td>
+                                                            <td>22552658</td>
+                                                      
+                                                      
+                                                      
+                                                          </tr>
+                                                          <tr>
+                                                            <!-- <td>F</td> -->
+                                                            <td>KRT</td>
+                                                            <td>PCE</td>
+                                                            <td>7</td>
+                                                            <td>7</td>
+                                                            <td>7896567120</td>
+                                                      
+                                                      
+                                                      
+                                                          </tr>
+                                                      
+                                                        </tbody>
+                                                      </table>
+                                                            <table class="table search_result table6" cellspacing="0">
+                                                              <thead>
+                                                                <tr>
+                                                                  <!-- <th>PackageClass</th> -->
+                                                            
+                                                                  <th>Package Unit</th>
+                                                                  <th>PackageBasics U/M</th>
+                                                                  <th>ConversionFactor</th>
+                                                                  <!-- <th>ConversionFactor M3</th> -->
+                                                                  <th>Calculated Quantity</th>
+                                                                  <th>EAN</th>
+                                                                </tr>
+                                                              </thead>
+                                                              <tbody>
+                                                                <tr>
+                                                                  <!-- <td>F</td> -->
+                                                                  <td>PCE</td>
+                                                                  <td>PCE</td>
+                                                                  <td>14</td>
+                                                                  <td>14</td>
+                                                                  <td>454552658</td>
+                                                            
+                                                            
+                                                            
+                                                                </tr>
+                                                                <tr>
+                                                                  <!-- <td>F</td> -->
+                                                                  <td>KRT</td>
+                                                                  <td>PCE</td>
+                                                                  <td>17</td>
+                                                                  <td>17</td>
+                                                                  <td>789234567120</td>
+                                                            
+                                                            
+                                                            
+                                                                </tr>
+                                                            
+                                                              </tbody>
+                                                            </table>
+                                  
+                                   
+                                </div>
+                            
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                     </div>
+                     
+
+              </div>
+        </div>
+     
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <!-- <footer class="main-footer">
+    <strong>Copyright &copy;  <a href="#">Price and Discound</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 
+    </div>
+  </footer> -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+</body>
+</html>
